@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: $pF;
+}
+
+html {
+  body {
+    width: 100%;
+    height: auto;
+    .center-wrapper {
+      width: 1100px;
+      height: 100%;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  html {
+    body {
+      .center-wrapper {
+        width: 100%;
+        padding: 0 5%;
+      }
+    }
+  }
+}

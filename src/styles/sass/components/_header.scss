@@ -1,0 +1,61 @@
+.app-header {
+  width: 100%;
+  display: flex;
+  border-bottom: $bG;
+  height: 70px;
+  .center-wrapper {
+    align-items: center;
+    justify-content: center;
+    .logo-wrapper {
+      .logo {
+        @extend %h3;
+      }
+    }
+    nav {
+      margin-left: auto;
+      ul {
+        display: flex;
+        li {
+          margin-left: 25px;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          // margin-top: 15px;
+          margin-top: 0px;
+          a {
+            text-decoration: none;
+            color: $dark;
+            font-family: $hF;
+            font-size: 1rem;
+          }
+          .link-icon {
+            width: 7px;
+            height: 7px;
+            margin: 0 auto;
+            margin-top: 5px;
+            padding: 0;
+            display: none;
+            margin-top: 5px;
+          }
+          #circle {
+            background-color: $dark;
+            border-radius: 50%;
+          }
+          #square {
+            background-color: $blue;
+          }
+          #triangle {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 8px solid $green;
+          }
+        }
+        #contact-link {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+}

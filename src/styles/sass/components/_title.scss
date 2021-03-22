@@ -1,0 +1,52 @@
+.title-wrapper {
+  margin: 100px 0;
+  width: 55%;
+  .page-title {
+    @extend %h1;
+    margin-bottom: 30px;
+  }
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+  }
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-subHeading,
+  .page-emHeading {
+    @extend %h3;
+  }
+  .page-emHeading {
+    font-style: italic;
+    font-weight: 300;
+  }
+  .flex-row {
+    .page-emHeading {
+      margin-left: auto;
+    }
+  }
+  a {
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 20px;
+    padding-top: 0;
+  }
+  a:hover {
+    border-bottom: $bO;
+    margin-bottom: -2px;
+  }
+}
+
+@media (max-width: 680px) {
+  .title-wrapper {
+    width: 100%;
+    .page-title {
+      margin-bottom: 50px;
+    }
+    a {
+      border-bottom: $bO;
+      margin-bottom: -2px;
+    }
+  }
+}

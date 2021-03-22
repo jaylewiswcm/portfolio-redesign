@@ -1,0 +1,48 @@
+// Fonts
+$hF: "Cabin", sans-serif; // Heading Font
+$pF: "Overpass", sans-serif; // Paragraph Font
+
+// Colors
+$dark: #2d3142;
+$light: #8e919c;
+$white: #ffffff;
+$blue: #008bf8;
+$orange: #ffa114;
+$green: #57e290;
+$grey: #e0e0e0;
+
+// Headings
+%h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $dark;
+  font-family: $hF;
+}
+%h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $dark;
+  font-family: $hF;
+}
+%h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $dark;
+  font-family: $hF;
+}
+%h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $dark;
+  font-family: $hF;
+}
+%hP {
+  font-size: 1rem;
+  font-weight: 500;
+  color: $light;
+  font-family: $pF;
+}
+
+// Borders
+$bG: $grey 1px solid;
+$bO: $orange 2px solid;
