@@ -8,11 +8,24 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+      resolve : `gatsby-transformer-json`,
+       options: {
+        typeName: `Json`, // a fixed string
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options : {
+        name: `data`,
+        path: `${__dirname}/src/data/`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -34,7 +47,7 @@ module.exports = {
       options: {
         fonts: [
           `Cabin`,
-          `Overpass`
+          `Overpass\:100,200,300,400,400i,700`
         ],
         display: 'swap'
       }
