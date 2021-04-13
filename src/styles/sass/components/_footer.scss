@@ -23,8 +23,14 @@
       a {
         width: 25px;
         height: 25px;
-        background-color: $grey;
         margin: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }

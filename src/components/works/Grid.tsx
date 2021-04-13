@@ -1,29 +1,20 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from "gatsby";
+// Components
 import GridItem from "./GridItem";
+// Redux
+import { connect, ConnectedProps } from "react-redux";
+import { InitialState } from "../../state/store";
 
-interface ComponentProps {
-  
-}
- const Grid = () => {
-   const [worksArr, setWorksArr] = useState([])
-   const [worksType, setWorksType] = useState(["freelance", "personal", "designs"])
+const mapState = (state:InitialState) => ({
+  typeOfWork: state.works.typeOfWork
+})
+const connector = connect(mapState);
 
-    // const data = useStaticQuery(graphql`
-    //   query WorkItemsQuery {
-    //     worksItemsJson {
-    //       edges {
-    //         node {
-    //             name
-    //             description
-    //             imgSrc
-    //         }
-    //       }
-    //     }
-    //   }
-    // `)
-  
+type PropsFromRedux = ConnectedProps<typeof connector>
+type Props = PropsFromRedux;
 
+ const Grid = ({ typeOfWork } :Props) => {
   const data = useStaticQuery(graphql`
    {
     allJson {
@@ -37,39 +28,31 @@ interface ComponentProps {
     }
   }
 }`)
+
+const [worksArr, _setWorksArr] = useState(data.allJson.edges)
   
-  useEffect(() => {
-    if(data) {
-    let newWorksArr = [];
-    for(let x = 0; x < data.allJson.edges.length; x++) {
-      // Loop through redux state
-      for(let t = 0; t < worksType.length; t++) {
-        if(data.allJson.edges[x].node.type === worksType[t]) {
-          newWorksArr.push(data.allJson.edges[x])
-        }
-      }
-    }
-    setWorksArr(newWorksArr)
-  }
-  }, [data])
-
-
-
   return (
     <div className="works-grid">
-      {worksArr.length !== 0 && worksArr.map((item: any, index: number) => <>
-          <GridItem 
-          key={index} 
-          name={item.node.name}
-          description={item.node.description}
-          imgSrc={item.node.imgSrc}
-          type={item.node.type}
-          />
+      {worksArr.length !== 0 && worksArr.map((item: any, index: number) => 
+      <> 
+      {  typeOfWork.map((type: string) => 
+        <>
+          { type === item.node.type && 
+            <GridItem 
+            key={index} 
+            name={item.node.name}
+            description={item.node.description}
+            imgSrc={item.node.imgSrc}
+            type={item.node.type}
+            />
+          }
+        </>
+      )}
       </>
-         )
+        )
       }
     </div>
   )
 }
 
-export default Grid;
+export default connector(Grid);

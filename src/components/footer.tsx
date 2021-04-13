@@ -1,6 +1,13 @@
-import * as React from "react"
+import React, { useState } from "react"
+import github from "../images/socials/github.svg";
+import githubHover from "../images/socials/github-hover.svg";
+import linkedin from "../images/socials/linkedin.svg";
+import linkedinHover from "../images/socials/linkedin-hover.svg";
 
 const Footer: React.FC = () => {
+  const [githubHovering, setGithubHover] = useState(false);
+  const [linkedinHovering, setLinkedinHover] = useState(false);
+
   return (
     <footer className="footer">
         <div className="footer-top">
@@ -10,8 +17,25 @@ const Footer: React.FC = () => {
               <p>Designed and developed by me.</p>
             </span>
             <span className="social-links">
-              <a href="/"></a>
-              <a href="/"></a>
+              <a 
+                href="/" 
+                onMouseOver={() => setGithubHover(true)}
+                onMouseOut={() => setGithubHover(false)}>
+                { githubHovering ? 
+                  <img src={githubHover} alt="Github"/>
+                : <img src={github} alt="Github"/>
+              }
+              
+              </a>
+              <a 
+                href="/"
+                onMouseOver={() => setLinkedinHover(true)}
+                onMouseOut={() => setLinkedinHover(false)}>
+              { linkedinHovering ? 
+                    <img src={linkedinHover} alt="Linkedin"/>
+                :  <img src={linkedin} alt="Linkedin"/>
+              } 
+              </a>
             </span>
           </div>
         </div>

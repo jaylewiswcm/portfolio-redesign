@@ -1,7 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from "gatsby";
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
-import Img from "gatsby-image"
+
 interface ComponentProps {
   name: string
   description: string
@@ -9,7 +8,7 @@ interface ComponentProps {
   type : string
 }
 
-const GridItem = ({name, description, imgSrc }:ComponentProps) => {
+const GridItem = ({name, imgSrc }:ComponentProps) => {
 
   // const [loading, setLoading] = useState(true)
   // useEffect(() => {

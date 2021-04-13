@@ -43,6 +43,13 @@ $textLight: #595d6e;
   color: $light;
   font-family: $pF;
 }
+// Paragraph
+%p1 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $dark;
+  font-family: $pF;
+}
 
 // Borders
 $bG: $grey 1px solid;

@@ -17,6 +17,9 @@ html {
       margin: 0 auto;
       align-items: center;
     }
+    .sub-heading {
+      @extend %h3;
+    }
   }
 }
 @media (max-width: 1100px) {

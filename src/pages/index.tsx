@@ -1,12 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+// Components 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/title/PageTitle";
-import Grid from "../components/works/Grid";
 import Works from "../components/works/Works";
+import Contact from "../components/contact/Contact";
 
 const IndexPage: React.FC = () => (
   <Layout>
@@ -15,8 +13,8 @@ const IndexPage: React.FC = () => (
       page="home" 
       title="Developer of modern websites and applications" 
       subHeading="Jay lewis" emHeading="See my work" />
-    {/* <Grid /> */}
     <Works />
+    <Contact />
   </Layout>
 )
 
