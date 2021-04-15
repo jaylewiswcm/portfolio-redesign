@@ -1,5 +1,6 @@
 .footer {
   width: 100%;
+  margin-bottom: 50px;
   .footer-top {
     width: 100%;
     height: 120px;
@@ -8,6 +9,8 @@
     display: flex;
     .center-wrapper {
       align-items: center;
+      display: flex;
+      margin-top: 0;
     }
     .credit {
       h6 {
@@ -37,17 +40,21 @@
   .center-wrapper {
     display: flex;
     align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    margin-top: 80px;
     .footer-column {
-      width: 20%;
-      margin-top: 80px;
+      width: 100%;
+      margin-right: 5%;
       h6 {
         @extend %h6;
+        font-weight: 700;
       }
       ul {
         margin-top: 30px;
         li {
           list-style-type: none;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           a,
           button,
           p {
@@ -58,11 +65,12 @@
             text-decoration: none;
             color: $dark;
             cursor: pointer;
+            font-weight: 300;
           }
           p {
             color: $light;
-            font-weight: 400;
-            font-size: 0.9rem;
+            font-weight: 300;
+            font-size: 0.8rem;
             cursor: default;
           }
           a:hover {
@@ -76,6 +84,95 @@
           margin: 0;
         }
       }
+    }
+  }
+}
+
+// @media (max-width: 370px) {
+//   .footer {
+//     .footer-top {
+//       .center-wrapper {
+//         display: flex;
+//         padding: 0 5%;
+//       }
+//     }
+//     .center-wrapper {
+//       grid-template-columns: repeat(1, 1fr);
+//       padding-top: 30px;
+//       .footer-column {
+//         margin: 0 auto;
+//         margin-top: 20px;
+//         width: 90%;
+//       }
+//       #contact-column {
+//         grid-row-start: 3;
+//         grid-column-start: 1;
+//         grid-column-end: 2;
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         margin: 0;
+//         margin-top: 20px;
+//         h6 {
+//           display: none;
+//         }
+//         ul {
+//           li {
+//             text-align: center;
+//           }
+//           #form-link {
+//             display: none;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+@media (max-width: 610px) {
+  .footer {
+    .footer-top {
+      .center-wrapper {
+        display: flex;
+      }
+    }
+    .center-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      .footer-column {
+        margin-right: 0;
+      }
+      #contact-column {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h6 {
+          display: none;
+        }
+        ul {
+          li {
+            text-align: center;
+          }
+          #form-link {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 611px) and (max-width: 880px) {
+  .footer {
+    .footer-top {
+      .center-wrapper {
+        display: flex;
+      }
+    }
+    .center-wrapper {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

@@ -22,6 +22,16 @@
           flex-direction: column;
           // margin-top: 15px;
           margin-top: 0px;
+          .active {
+            span {
+              img {
+                display: block;
+              }
+            }
+            #circle {
+              display: block;
+            }
+          }
           a {
             text-decoration: none;
             color: $dark;
@@ -29,28 +39,54 @@
             font-size: 1rem;
           }
           .link-icon {
-            width: 7px;
-            height: 7px;
+            width: 11px;
+            height: 11px;
             margin: 0 auto;
             margin-top: 5px;
             padding: 0;
-            display: none;
+            // border: 1px red solid;
             margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: visible;
+            // border: 1px solid red;
+            img {
+              width: 100%;
+              height: 100%;
+              display: none;
+            }
+            #hexagon {
+              width: 92%;
+              height: 82%;
+            }
+            #circle {
+              width: 80%;
+              height: 80%;
+              display: none;
+            }
+            #square {
+              width: 80%;
+              height: 80%;
+            }
           }
           #circle {
             background-color: $dark;
             border-radius: 50%;
+            width: 9px;
+            height: 9px;
+            margin-top: 6px;
           }
-          #square {
-            background-color: $blue;
-          }
-          #triangle {
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-bottom: 8px solid $green;
-          }
+          // #square {
+          //   background-color: $blue;
+          // }
+          // #triangle {
+          //   width: 0;
+          //   height: 0;
+          //   border-left: 5px solid transparent;
+          //   border-right: 5px solid transparent;
+          //   border-bottom: 8px solid $green;
+          // }
         }
         #contact-link {
           margin-left: 50px;

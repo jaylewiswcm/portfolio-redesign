@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jay Lewis`,
+    description: `Design and development portfolio for the web.`,
+    author: `Jay Lewis`,
+    siteURL: `http://localhost:8000/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -46,8 +47,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Cabin`,
-          `Overpass\:100,200,300,400,400i,700`
+          `Cabin\:400, 400i, 500, 600, 700`,
+          `Overpass\:100,200,300,400,400i, 600, 700`
         ],
         display: 'swap'
       }

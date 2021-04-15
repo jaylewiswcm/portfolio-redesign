@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import { useStaticQuery, graphql } from "gatsby";
 // Components
 import GridItem from "./GridItem";
@@ -34,9 +34,9 @@ const [worksArr, _setWorksArr] = useState(data.allJson.edges)
   return (
     <div className="works-grid">
       {worksArr.length !== 0 && worksArr.map((item: any, index: number) => 
-      <> 
-      {  typeOfWork.map((type: string) => 
-        <>
+      <Fragment key={index}> 
+      {  typeOfWork.map((type: string, index:number) => 
+        <Fragment key={index}>
           { type === item.node.type && 
             <GridItem 
             key={index} 
@@ -46,9 +46,9 @@ const [worksArr, _setWorksArr] = useState(data.allJson.edges)
             type={item.node.type}
             />
           }
-        </>
+        </Fragment>
       )}
-      </>
+      </Fragment>
         )
       }
     </div>

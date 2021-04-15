@@ -57,16 +57,10 @@ const Footer: React.FC = () => {
               <li><a href="/">Experience</a></li>
             </ul>
           </div>
-          <div className="footer-column">
-            <h6>Blog</h6>
-            <ul>
-              <li><a href="/">Posts</a></li>
-            </ul>
-          </div>
-          <div className="footer-column">
+          <div className="footer-column" id="contact-column">
             <h6>Contact</h6>
             <ul>
-              <li><a href="/">Form</a></li>
+              <li id="form-link"><a href="/">Form</a></li>
               <li className="p-li">
                 <p>Phone Number</p>
               </li>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import square from "../../images/icons/square.svg";
 import triangle from "../../images/icons/triangle.svg";
 import circle from "../../images/icons/circle.svg";
@@ -55,12 +55,12 @@ type Props = PropsFromRedux;
           <button onClick={() => changeWorksType("freelance")}>Freelance</button>
           <span className="shape-wrapper">
             { 
-              typeOfWork.map((type:string) => 
-                <>
+              typeOfWork.map((type:string, index:number) => 
+                <Fragment key={index}>
                   {type === "freelance" &&  
                       <img src={square} alt="Square" className="smaller-shape"/>    
                   }
-                </>
+                </Fragment>
               )
             }
           </span>
@@ -69,12 +69,12 @@ type Props = PropsFromRedux;
           <button onClick={() => changeWorksType("personal")}>Personal</button>
           <span className="shape-wrapper">
             { 
-              typeOfWork.map((type:string) => 
-                <>
+              typeOfWork.map((type:string, index: number) => 
+                <Fragment key={index}>
                   {type === "personal" && 
-                      <img src={triangle} alt="Triangle" />
+                      <img src={triangle} alt="Triangle" key="triangle"/>
                   }
-                </>
+                </Fragment>
               )
             }
           </span>
@@ -83,12 +83,12 @@ type Props = PropsFromRedux;
           <button onClick={() => changeWorksType("designs")}>Designs</button>
           <span className="shape-wrapper">
           { 
-            typeOfWork.map((type:string) => 
-              <>
+            typeOfWork.map((type:string, index: number) => 
+              <Fragment key={index}>
                 {type === "designs" &&      
-                    <img src={circle} alt="Circle"className="smaller-shape" />
+                    <img src={circle} alt="Circle"className="smaller-shape" key="circle"/>
                 }
-              </>
+              </Fragment>
             )
           }
             </span>

@@ -6,7 +6,7 @@
  */
 
 import * as React from "react"
-import PropTypes from "prop-types"
+
 import { useStaticQuery, graphql } from "gatsby"
 import "../styles/style.css";
 import Header from "./header"
@@ -29,7 +29,7 @@ const Layout = ({ children }: ComponentProps) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header />
       <div className="app-wrapper">
         <main>{children}</main>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby";
-
+import PageHeadImage from "../style/PageHeadImage";
 interface ComponentProps {
   page: string
   title : string
@@ -13,14 +13,26 @@ interface ComponentProps {
     <div className="center-wrapper">
       <div className="title-wrapper">
        <h1 className="page-title">{title}</h1> 
-        <span className={page === "home" ? "flex-row" : "flex-col"}>
-           <h2 className="page-subHeading">{subHeading}</h2>
-           {page === "home" ?
-            <Link to="/"className="page-emHeading">{emHeading}</Link>
-           :  <h2 className="page-emHeading">{emHeading}</h2>}
-          
-        </span>
+       { page === "home" ? 
+        <span className="flex-row">
+               <h2 className="page-subHeading">{subHeading}</h2>
+               {page === "home" ?
+                <Link to="/"className="page-emHeading">{emHeading}</Link>
+               :  <h2 className="page-emHeading">{emHeading}</h2>}
+              
+            </span>
+            : 
+            <span className="flex-col">
+            <h2 className="page-subHeading">{subHeading}</h2>
+            {page === "home" ?
+             <Link to="/"className="page-emHeading">{emHeading}</Link>
+            :  <h2 className="page-emHeading heading-spacing">{emHeading}</h2>}
+           
+         </span>
+      }
+
       </div>
+      <PageHeadImage />
     </div>
   )
 }
