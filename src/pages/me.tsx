@@ -10,8 +10,9 @@ const Me: React.FC = () => (
     <PageTitle 
       page="me" 
       title="Me" 
-      subHeading="Not only a Graduate Web Developer." emHeading="In-between coding if  I’m not out with friends then I’m listen to music and playing my guitar. I also love stepping outside for walks to rejuvenate my creativity." />
+      subHeading="Not only a Graduate Web Developer." emHeading="In-between coding if  I’m not out with friends then I’m listen to music and playing my guitar. I also love stepping outside for walks to rejuvenate my creativity."
+      link="" />
   </Layout>
 )
 
-export default Me
+export default Me 

@@ -2,7 +2,7 @@ import React from 'react'
 
  const Form = () => {
   return (
-    <form action="">
+    <form action="" id="form">
       <span className="input-wrapper">
         <label htmlFor="name">What's your name?</label>
         <input type="text" name="name" id="name" placeholder="Enter your name"></input>

@@ -13,9 +13,10 @@ const IndexPage: React.FC = () => (
     <PageTitle 
       page="home" 
       title="Developer of modern websites and applications" 
-      subHeading="Jay lewis" emHeading="See my work" />
+      subHeading="Jay lewis" emHeading="See my work"
+      link="/work" />
 
-    <Works />
+    <Works page="home"/>
     <Contact />
   </Layout>
 )

@@ -22,31 +22,6 @@ html {
     .sub-heading {
       @extend %h3;
     }
-    .head-image-wrapper {
-      width: 700px;
-      margin: 0;
-      margin-bottom: auto;
-      margin-top: 50px;
-      margin-left: 750px;
-      position: absolute;
-      // left: 500px;
-      img {
-        position: relative;
-        width: 100%;
-        border-radius: 3px;
-        box-shadow: $shadow;
-        z-index: 1;
-      }
-      .background-square {
-        width: 300px;
-
-        position: absolute;
-        bottom: -60px;
-        left: -90px;
-        z-index: 0;
-        box-shadow: none;
-      }
-    }
   }
 }
 

@@ -1,25 +1,25 @@
 [
     {
       "name" : "Dirt",
-      "description" : "A tribute band for the grunge band Alice in Chains.",
+      "description" : "Band brochure website",
       "imgSrc" : "/works/dirt/home@2x.jpg",
       "type" : "freelance"
     },
     {
       "name" : "Bouncing Borders",
-      "description" : "Couples blog to document their travels through blog posts and images.",
+      "description" : "Couples Travel Blog",
       "imgSrc" : "/works/bouncingborders/home@2x.jpg",
       "type" : "personal"
     },
     {
       "name" : "Pitchers",
-      "description" : "A sports bar and grill that offers a wide range of drinks and food in the heart of Chepstow.",
+      "description" : "Bar brochure website",
       "imgSrc" : "/works/pitchers/home@2x.jpg",
       "type" : "freelance"
     },
     {
       "name" : "FolioTune",
-      "description" : "A place to create, document, share and collaborate with song ideas.",
+      "description" : "Social music creation web application",
       "imgSrc" : "/works/foliotune/home@2x.jpg",
       "type" : "personal"
     }

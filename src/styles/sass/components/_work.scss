@@ -74,6 +74,38 @@
       box-shadow: $shadowHover;
     }
   }
+  .grid-item-w-info {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    a {
+      text-decoration: none;
+    }
+    img {
+      width: 100%;
+      box-shadow: $shadow;
+      border-radius: 3px;
+      transition: 0.2s;
+      margin-bottom: 5px;
+    }
+    .works-title {
+      width: 100%;
+      h6 {
+        @extend %h6;
+        text-decoration: none;
+      }
+      p {
+        font-size: 0.9rem;
+        color: $textLight;
+        text-decoration: none;
+      }
+    }
+  }
+  .grid-item-w-info:hover {
+    img {
+      box-shadow: $shadowHover;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -83,6 +115,9 @@
     gap: 20px;
     .grid-item {
       height: 200px;
+    }
+    .grid-item-w-info {
+      margin: 2% 5%;
     }
   }
 }

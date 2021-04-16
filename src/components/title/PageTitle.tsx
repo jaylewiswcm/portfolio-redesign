@@ -1,38 +1,42 @@
 import React from 'react'
 import { Link } from "gatsby";
 import PageHeadImage from "../style/PageHeadImage";
+
 interface ComponentProps {
   page: string
   title : string
   subHeading : string
   emHeading : string
+  link: string
 }
 
- const PageTitle = ({page, title , subHeading, emHeading  } :ComponentProps) => {
+ const PageTitle = ({page, title , subHeading, emHeading, link  } :ComponentProps) => {
   return (
-    <div className="center-wrapper">
-      <div className="title-wrapper">
+    <div className="heading-wrapper">
+      <div className={ page === "home" || page === "me" ? "home-title" : "title-wrapper"}>
        <h1 className="page-title">{title}</h1> 
        { page === "home" ? 
         <span className="flex-row">
                <h2 className="page-subHeading">{subHeading}</h2>
-               {page === "home" ?
-                <Link to="/"className="page-emHeading">{emHeading}</Link>
-               :  <h2 className="page-emHeading">{emHeading}</h2>}
-              
+                <Link to={link !== "" ? link : "/"}className="page-emHeading">
+                  <span className="link-bg"></span>
+                  <p>{emHeading}</p></Link>
+  
             </span>
             : 
             <span className="flex-col">
             <h2 className="page-subHeading">{subHeading}</h2>
-            {page === "home" ?
-             <Link to="/"className="page-emHeading">{emHeading}</Link>
-            :  <h2 className="page-emHeading heading-spacing">{emHeading}</h2>}
+            {   
+              link !== "" ?
+             <h2 className="page-emHeading heading-spacing">{emHeading}<Link to={link !== "" ? link : "/"}>click here</Link></h2>
+             :
+             <h2 className="page-emHeading heading-spacing">{emHeading}</h2>
+            }
            
          </span>
       }
-
       </div>
-      <PageHeadImage />
+      <PageHeadImage page={page}/>
     </div>
   )
 }

@@ -11,7 +11,7 @@ import bannerImage from "../../images/background/orange-banner.svg";
         <p>Get in touch with me if you have a project in mind, 
         I’m happy to help whether it’s some consultation or 
         leading the design and development of the project.</p>
-      <Link to="/">Get in touch</Link>
+      <Link to="/contact">Get in touch</Link>
       </div>
       <div className="banner-image">
         <img src={bannerImage} alt="Banner"/>

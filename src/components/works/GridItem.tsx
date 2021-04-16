@@ -37,10 +37,6 @@ const GridItem = ({name, imgSrc, description }:ComponentProps) => {
         <Img fluid={`${imgSrc}`} />
              <Img className="home-logo" fluid={data.file.childImageSharp.fluid} alt="Pitchers logo" /> */}
         <img src={`../../images/${imgSrc}`} alt="Works Image" />
-        <span className="works-tilte">
-          <h6>{name}</h6>
-          <p>{description}</p>
-        </span>
       </Link>
       </div>
   )

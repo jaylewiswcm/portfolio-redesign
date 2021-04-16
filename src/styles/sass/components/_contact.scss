@@ -72,74 +72,73 @@
     margin: 30px 0;
     display: none;
   }
-  form {
-    width: 50%;
+}
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  margin-bottom: auto;
+  padding-left: 20px;
+  overflow: visible;
+  .input-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    margin-top: 32px;
-    margin-bottom: auto;
-    padding-left: 20px;
-    overflow: visible;
-    .input-wrapper {
-      width: 100%;
-      margin-bottom: 10px;
-      display: flex;
-      flex-direction: column;
-      label {
-        @extend %h6;
-        font-size: 0.9rem;
-        font-weight: 500;
-        margin: 0 10px;
-        margin-bottom: 5px;
-      }
-      input,
-      textarea {
-        border: 1px $grey solid;
-        border-radius: 3px;
-        outline: none;
-        padding: 5px 10px;
-        color: $dark;
-        font-size: 1rem;
-        font-weight: 500;
-        transition: 0.2s;
-      }
-      input::placeholder {
-        font-family: $pF;
-        font-weight: 400;
-        font-size: 1rem;
-        color: $textLight;
-      }
-      input:focus {
-        border: 1px $blue solid;
-        box-shadow: $shadow;
-      }
-      textarea {
-        resize: none;
-        height: 150px;
-        transition: 0.2s;
-      }
-      textarea::placeholder {
-        font-family: $pF;
-        font-weight: 400;
-        font-size: 1rem;
-        color: $textLight;
-      }
-      textarea:focus {
-        border: 1px $blue solid;
-        box-shadow: $shadow;
-      }
+    label {
+      @extend %h6;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin: 0 10px;
+      margin-bottom: 8px;
     }
-    input[type="submit"] {
-      @extend %btnOrange;
-      margin-left: auto;
-      margin-top: 5px;
+    input,
+    textarea {
+      border: 1px $grey solid;
+      border-radius: 3px;
+      outline: none;
+      padding: 5px 10px;
+      color: $dark;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: 0.2s;
     }
-    input[type="submit"]:hover {
-      box-shadow: $shadowHover;
+    input::placeholder {
+      font-family: $pF;
+      font-weight: 400;
+      font-size: 1rem;
+      color: $textLight;
+    }
+    input:focus {
+      border: 1px $blue solid;
+      box-shadow: $shadow;
+    }
+    textarea {
+      resize: none;
+      height: 150px;
+      transition: 0.2s;
+    }
+    textarea::placeholder {
+      font-family: $pF;
+      font-weight: 400;
+      font-size: 1rem;
+      color: $textLight;
+    }
+    textarea:focus {
+      border: 1px $blue solid;
+      box-shadow: $shadow;
     }
   }
+  input[type="submit"] {
+    @extend %btnOrange;
+    margin-left: auto;
+    margin-top: 5px;
+  }
+  input[type="submit"]:hover {
+    box-shadow: $shadowHover;
+  }
 }
-
 .copied-alert {
   width: 100%;
   display: flex;
@@ -157,6 +156,28 @@
   }
   img {
     width: 10px;
+  }
+}
+.contact-form-container {
+  @extend .center-wrapper;
+  flex-direction: column;
+  .form-title {
+    width: 50%;
+    margin: 0 auto;
+    h3 {
+      @extend %h3;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $textLight;
+      margin: 10px 0;
+    }
+  }
+  form {
+    margin: 25px auto;
+    margin-bottom: 150px;
+    padding: 0;
   }
 }
 

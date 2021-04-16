@@ -47,10 +47,30 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Cabin\:400, 400i, 500, 600, 700`,
-          `Overpass\:100,200,300,400,400i, 600, 700`
+          `Cabin\:400`,
+          `Cabin\:400i`,
+          `Cabin\:500`,
+          `Cabin\:600`,
+          `Cabin\:700`,
+          `Overpass`,
+          `Overpass\:100`,
+          `Overpass\:100i`,
+          `Overpass\:200`,
+          `Overpass\:200i`,
+          `Overpass\:300`,
+          `Overpass\:300i`,
+          `Overpass\:400`,
+          `Overpass\:400i`,
+          `Overpass\:600`,
+          `Overpass\:700`
         ],
         display: 'swap'
+      }
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -150
       }
     },
     {

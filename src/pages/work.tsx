@@ -12,8 +12,9 @@ const Work: React.FC = () => (
     <PageTitle 
       page="work" 
       title="My Work" 
-      subHeading="Selection of projects from freelancing and personal projects." emHeading="If you want to find out more about the technology I use click here" />
-      <Works />
+      subHeading="Selection of projects from freelancing and personal projects." emHeading="If you want to find out more about the technology I use "
+      link="/me" />
+      <Works page="works"/>
       <AddToPortfolio />
   </Layout>
 )

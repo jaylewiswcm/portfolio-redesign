@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 // Svgs
 import square from "../images/icons/square.svg"
 import triangle from "../images/icons/triangle.svg"
-import hexagon from "../images/icons/hexagon.svg"
 
 
 const Header: React.FC = () => {
@@ -49,7 +48,7 @@ const Header: React.FC = () => {
             </span>
           </li>
           <li id="contact-link">
-            <PartialNavLink to="/"  activeClassName="active">Contact</PartialNavLink>
+            <PartialNavLink to="/contact"  activeClassName="active">Contact</PartialNavLink>
           </li>
         </ul>
       </nav>
