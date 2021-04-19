@@ -3,24 +3,28 @@
       "name" : "Dirt",
       "description" : "Band brochure website",
       "imgSrc" : "/works/dirt/home@2x.jpg",
-      "type" : "freelance"
+      "type" : "freelance",
+      "slug": "dirt"
     },
     {
       "name" : "Bouncing Borders",
       "description" : "Couples Travel Blog",
       "imgSrc" : "/works/bouncingborders/home@2x.jpg",
-      "type" : "personal"
+      "type" : "personal",
+      "slug": "bouncingborders"
     },
     {
       "name" : "Pitchers",
       "description" : "Bar brochure website",
       "imgSrc" : "/works/pitchers/home@2x.jpg",
-      "type" : "freelance"
+      "type" : "freelance",
+      "slug": "pitchers"
     },
     {
       "name" : "FolioTune",
       "description" : "Social music creation web application",
       "imgSrc" : "/works/foliotune/home@2x.jpg",
-      "type" : "personal"
+      "type" : "personal",
+      "slug": "foliotune"
     }
 ]

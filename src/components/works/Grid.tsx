@@ -1,8 +1,9 @@
-import React, { useState, Fragment } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import { useStaticQuery, graphql } from "gatsby";
 // Components
 import GridItem from "./GridItem";
 import ItemWithInfo from "./ItemWithInfo";
+import EmptyGridState from "./EmptyGridState";
 // Redux
 import { connect, ConnectedProps } from "react-redux";
 import { InitialState } from "../../state/store";
@@ -18,7 +19,18 @@ type Props = PropsFromRedux & {
 };
 
  const Grid = ({ typeOfWork, page } :Props) => {
-   console.log(page);
+  const [emptyState, setEmptyState] = useState(false)
+
+  useEffect(() => {
+    if(typeOfWork.length === 0) {
+      setEmptyState(true)
+      console.log("empty")
+    } else {
+      setEmptyState(false)
+    }
+    console.log(typeOfWork);
+  },[typeOfWork])
+
   const data = useStaticQuery(graphql`
    {
     allJson {
@@ -28,6 +40,7 @@ type Props = PropsFromRedux & {
         description
         imgSrc
         type
+        slug
       }
     }
   }
@@ -48,6 +61,7 @@ const [worksArr, _setWorksArr] = useState(data.allJson.edges)
             description={item.node.description}
             imgSrc={item.node.imgSrc}
             type={item.node.type}
+            slug={item.node.slug}
             />
           }
           { type === item.node.type && page === "works" && 
@@ -57,12 +71,17 @@ const [worksArr, _setWorksArr] = useState(data.allJson.edges)
             description={item.node.description}
             imgSrc={item.node.imgSrc}
             type={item.node.type}
+            slug={item.node.slug}
             />
           }
         </Fragment>
       )}
       </Fragment>
         )
+      }
+      {
+        emptyState === true && 
+        <EmptyGridState />
       }
     </div>
   )

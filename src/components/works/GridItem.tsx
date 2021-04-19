@@ -6,9 +6,10 @@ interface ComponentProps {
   description: string
   imgSrc : string
   type : string
+  slug: string
 }
 
-const GridItem = ({name, imgSrc, description }:ComponentProps) => {
+const GridItem = ({name, imgSrc, slug }:ComponentProps) => {
 
   // const [loading, setLoading] = useState(true)
   // useEffect(() => {
@@ -32,7 +33,7 @@ const GridItem = ({name, imgSrc, description }:ComponentProps) => {
 
   return (
       <div className="grid-item">
-      <Link to={`/${name}`}>
+      <Link to={`/work/${slug}`}>
         {/* <StaticImage src={`${imgSrc}`} alt="Works Item"/>
         <Img fluid={`${imgSrc}`} />
              <Img className="home-logo" fluid={data.file.childImageSharp.fluid} alt="Pitchers logo" /> */}

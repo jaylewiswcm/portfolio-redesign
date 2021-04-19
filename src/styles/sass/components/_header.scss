@@ -15,6 +15,7 @@
     }
     nav {
       margin-left: auto;
+      margin-top: 15px;
       ul {
         display: flex;
         li {
@@ -26,12 +27,14 @@
           margin-top: 0px;
           .active {
             span {
+              border: 2px red solid;
               img {
                 display: block;
               }
             }
             #circle {
               display: block;
+              
             }
           }
           a {
@@ -78,6 +81,7 @@
             width: 9px;
             height: 9px;
             margin-top: 6px;
+            display: none;
           }
           // #square {
           //   background-color: $blue;

@@ -38,7 +38,7 @@ html body .sub-heading, .app-header .center-wrapper .logo-wrapper .logo, .app-he
   font-family: "Overpass", sans-serif;
 }
 
-.contact-heading .link-to-form, .banner-wrapper .banner-info a {
+.contact-heading .link-to-form, .works-grid .work-empty-state a, .banner-wrapper .banner-info a {
   background: none;
   border: none;
   outline: none;
@@ -136,6 +136,7 @@ html body .center-wrapper, html body .contact-form-container {
 
 .app-header .center-wrapper nav, .app-header .contact-form-container nav {
   margin-left: auto;
+  margin-top: 15px;
 }
 
 .app-header .center-wrapper nav ul, .app-header .contact-form-container nav ul {
@@ -155,6 +156,10 @@ html body .center-wrapper, html body .contact-form-container {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 0px;
+}
+
+.app-header .center-wrapper nav ul li .active span, .app-header .contact-form-container nav ul li .active span {
+  border: 2px red solid;
 }
 
 .app-header .center-wrapper nav ul li .active span img, .app-header .contact-form-container nav ul li .active span img {
@@ -219,6 +224,7 @@ html body .center-wrapper, html body .contact-form-container {
   width: 9px;
   height: 9px;
   margin-top: 6px;
+  display: none;
 }
 
 .app-header .center-wrapper nav ul #contact-link, .app-header .contact-form-container nav ul #contact-link {
@@ -986,6 +992,52 @@ html body .center-wrapper, html body .contact-form-container {
 .works-grid .grid-item-w-info:hover img {
   -webkit-box-shadow: 0 0 50px rgba(45, 49, 66, 0.36);
           box-shadow: 0 0 50px rgba(45, 49, 66, 0.36);
+}
+
+.works-grid .work-empty-state {
+  background-color: #e0e0e0;
+  width: 90%;
+  height: 90%;
+}
+
+.works-grid .work-empty-state h4 {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Cabin", sans-serif;
+  font-size: 1.2rem;
+  color: #2d3142;
+  margin: 15px 0;
+}
+
+.works-grid .work-empty-state p {
+  font-size: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  color: #2d3142;
+}
+
+.works-grid .work-empty-state a {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  width: 60%;
+  height: auto;
+  margin: 25px auto;
+}
+
+.works-grid .work-empty-state a:hover {
+  width: 60%;
+  height: auto;
 }
 
 @media (max-width: 480px) {

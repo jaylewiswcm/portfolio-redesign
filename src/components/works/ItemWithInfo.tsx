@@ -6,12 +6,13 @@ interface ComponentProps {
   description: string
   imgSrc : string
   type : string
+  slug: string
 }
 
-const ItemWithInfo = ({name, imgSrc, description }:ComponentProps) => {
+const ItemWithInfo = ({name, imgSrc, description , slug}:ComponentProps) => {
   return (
       <div className="grid-item-w-info">
-      <Link to={`/${name}`}>
+      <Link to={`/work/${slug}`}>
         <img src={`../../images/${imgSrc}`} alt="Works Image" />
         <span className="works-title">
           <h6>{name}</h6>
