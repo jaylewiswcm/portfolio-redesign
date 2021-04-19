@@ -92,6 +92,7 @@ form {
       font-weight: 500;
       margin: 0 10px;
       margin-bottom: 8px;
+      -webkit-appearance: none;
     }
     input,
     textarea {
@@ -103,6 +104,7 @@ form {
       font-size: 1rem;
       font-weight: 500;
       transition: 0.2s;
+      -webkit-appearance: none;
     }
     input::placeholder {
       font-family: $pF;
@@ -134,6 +136,7 @@ form {
     @extend %btnOrange;
     margin-left: auto;
     margin-top: 5px;
+    -webkit-appearance: none;
   }
   input[type="submit"]:hover {
     box-shadow: $shadowHover;
@@ -195,6 +198,11 @@ form {
       display: block;
     }
   }
+  .contact-form-container {
+    .form-title, form {
+      width: 90%;
+    }
+  }
 }
 
 @media (min-width: 391px) and (max-width: 600px) {
@@ -211,11 +219,22 @@ form {
       display: block;
     }
   }
+  .contact-form-container {
+    .form-title, form {
+      width: 100%;
+      padding: 0 10px;
+    }
+  }
 }
 
 @media (min-width: 601px) and (max-width: 730px) {
   #contact-wrapper {
     width: 100%;
+  }
+  .contact-form-container {
+    .form-title, form {
+      width: 70%;
+    }
   }
 }
 
@@ -223,4 +242,5 @@ form {
   #contact-wrapper {
     width: 90%;
   }
+
 }

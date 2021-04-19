@@ -1,13 +1,14 @@
-import * as React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 // Svgs
 import square from "../images/icons/square.svg"
 import triangle from "../images/icons/triangle.svg"
+import burger from "../images/burger/burger.svg";
 
 
 const Header: React.FC = () => {
-
+  const [menuToggle, setMenuToggle] = useState(false);
   const isPartiallyActive = ({ isPartiallyCurrent }: any) => {
     return isPartiallyCurrent
       ? { className: 'active' }
@@ -20,11 +21,19 @@ const Header: React.FC = () => {
     </Link>
   )
   
+  const toggleMenu = () => {
+    if(menuToggle) {
+      setMenuToggle(false)
+    } else {
+      setMenuToggle(true)
+    }
+  }
+
   return (
   <header className="app-header">
     <div className="center-wrapper">
       <span className="logo-wrapper">
-        <h1 className='logo'>Logo</h1>  
+        <Link to="/" className='logo'>Jay Lewis</Link>  
       </span>  
       <nav>
         <ul>
@@ -52,7 +61,17 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
+      <button onClick={() => toggleMenu()} className="burger-menu-icon">
+        <img src={burger} alt="Menu"/>
+      </button>
+
     </div>
+    <ul className="mobile-menu" style={menuToggle === true ? { minHeight: "220px" } : {minHeight: "0px"}}>
+        <li><Link to="/" >Home</Link></li>
+        <li><Link to="/work" >Work</Link></li>
+        <li><Link to="/me" >Me</Link></li>
+        <li><Link to="/contact" >Contact</Link></li>
+      </ul>
   </header>
   )
   }

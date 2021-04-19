@@ -127,6 +127,11 @@ html body .center-wrapper, html body .contact-form-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.app-header .center-wrapper .logo-wrapper .logo, .app-header .contact-form-container .logo-wrapper .logo {
+  text-decoration: none;
 }
 
 .app-header .center-wrapper nav, .app-header .contact-form-container nav {
@@ -218,6 +223,87 @@ html body .center-wrapper, html body .contact-form-container {
 
 .app-header .center-wrapper nav ul #contact-link, .app-header .contact-form-container nav ul #contact-link {
   margin-left: 50px;
+}
+
+.app-header .center-wrapper .burger-menu-icon, .app-header .contact-form-container .burger-menu-icon {
+  background: none;
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 25px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  cursor: pointer;
+  z-index: 16;
+}
+
+.app-header .center-wrapper .burger-menu-icon img, .app-header .contact-form-container .burger-menu-icon img {
+  width: 100%;
+}
+
+.app-header .mobile-menu {
+  display: none;
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
+          box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 15;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.app-header .mobile-menu li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.app-header .mobile-menu li a {
+  font-family: "Cabin", sans-serif;
+  color: #2d3142;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .app-header .center-wrapper nav, .app-header .contact-form-container nav {
+    display: none;
+  }
+  .app-header .center-wrapper .burger-menu-icon, .app-header .contact-form-container .burger-menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .app-header .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer {
@@ -641,6 +727,58 @@ html body .center-wrapper, html body .contact-form-container {
   min-height: 100%;
 }
 
+@media (max-width: 460px) {
+  .contact-heading {
+    width: 100%;
+    margin-bottom: 200px;
+    margin-top: 60px;
+  }
+  .contact-heading .page-title {
+    text-align: left;
+    width: 100%;
+  }
+  .contact-heading .page-emHeading {
+    width: 100%;
+    text-align: left;
+  }
+  .contact-heading .details-wrapper {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-heading .details-wrapper .contact-detail {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .contact-heading .details-wrapper .border-right {
+    border: none;
+  }
+  .contact-heading .link-to-form {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 461px) and (max-width: 700px) {
+  .contact-heading {
+    width: 100%;
+  }
+  .contact-heading .page-emHeading {
+    width: 80%;
+  }
+  .contact-heading .details-wrapper {
+    width: 80%;
+  }
+}
+
 @media (max-width: 680px) {
   .heading-wrapper, .contact-heading {
     -webkit-box-orient: vertical;
@@ -653,6 +791,7 @@ html body .center-wrapper, html body .contact-form-container {
   .title-wrapper {
     width: 100%;
     margin-bottom: 80px;
+    margin-top: 60px;
   }
   .home-title .page-title,
   .title-wrapper .page-title {
@@ -662,6 +801,11 @@ html body .center-wrapper, html body .contact-form-container {
   .title-wrapper .flex-row a {
     border-bottom: #ffa114 2px solid;
     margin-bottom: -2px;
+  }
+  .home-title .flex-row a:hover,
+  .title-wrapper .flex-row a:hover {
+    border-bottom: none;
+    margin-bottom: 0;
   }
   .title-wrapper {
     width: 90%;
@@ -1007,6 +1151,7 @@ form .input-wrapper label {
   font-weight: 500;
   margin: 0 10px;
   margin-bottom: 8px;
+  -webkit-appearance: none;
 }
 
 form .input-wrapper input,
@@ -1020,6 +1165,7 @@ form .input-wrapper textarea {
   font-weight: 500;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  -webkit-appearance: none;
 }
 
 form .input-wrapper input::-webkit-input-placeholder {
@@ -1100,6 +1246,7 @@ form .input-wrapper textarea:focus {
 form input[type="submit"] {
   margin-left: auto;
   margin-top: 5px;
+  -webkit-appearance: none;
 }
 
 form input[type="submit"]:hover {
@@ -1180,6 +1327,9 @@ form input[type="submit"]:hover {
   #contact-wrapper .mobile-form-title {
     display: block;
   }
+  .contact-form-container .form-title, .contact-form-container form {
+    width: 90%;
+  }
 }
 
 @media (min-width: 391px) and (max-width: 600px) {
@@ -1199,11 +1349,18 @@ form input[type="submit"]:hover {
   #contact-wrapper .mobile-form-title {
     display: block;
   }
+  .contact-form-container .form-title, .contact-form-container form {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 730px) {
   #contact-wrapper {
     width: 100%;
+  }
+  .contact-form-container .form-title, .contact-form-container form {
+    width: 70%;
   }
 }
 
@@ -1369,6 +1526,7 @@ form input[type="submit"]:hover {
   left: 10%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  background-color: #ffffff;
 }
 
 .head-image-wrapper .background-square {
@@ -1409,6 +1567,7 @@ form input[type="submit"]:hover {
           box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
   position: relative;
   z-index: 1;
+  background-color: #ffffff;
 }
 
 .head-image-wrapper-full .background-square {
@@ -1424,6 +1583,7 @@ form input[type="submit"]:hover {
   .head-image-wrapper-full {
     width: 100%;
     margin: 0;
+    padding: 0;
   }
   .head-image-wrapper .work-image,
   .head-image-wrapper-full .work-image {
@@ -1445,6 +1605,9 @@ form input[type="submit"]:hover {
 }
 
 @media (min-width: 680px) and (max-width: 850px) {
+  .head-image-wrapper {
+    padding: 0;
+  }
   .head-image-wrapper .work-image {
     width: 550px;
   }
