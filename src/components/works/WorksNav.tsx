@@ -48,7 +48,7 @@ type Props = PropsFromRedux;
   }
 
   return (
-    <div className='works-navigation'>
+    <div className='works-navigation' id="my-works">
       <h3 className="sub-heading">Works</h3>
       <ul className="btn-list">
         <li>

@@ -146,35 +146,8 @@
       display: none;
     }
   }
-  .link-to-form {
-    @extend %btnBlue;
+  .anchor-link {
     margin-top: 60px;
-    border: 2px $blue solid;
-    position: relative;
-    p {
-      position: relative;
-      z-index: 1;
-    }
-    .btn-bg {
-      position: absolute;
-      z-index: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: $white;
-      transition: 0.2s;
-      min-height: 0;
-      transform: rotate(180deg);
-    }
-  }
-  .link-to-form:hover {
-    box-shadow: $shadow;
-    p {
-      color: $blue;
-    }
-    .btn-bg {
-      min-height: 100%;
-    }
   }
 }
 
@@ -182,7 +155,7 @@
   .contact-heading {
     width: 100%;
     margin-bottom: 200px;
-    margin-top:  60px;
+    margin-top: 60px;
     .page-title {
       text-align: left;
       width: 100%;
@@ -205,11 +178,11 @@
         border: none;
       }
     }
-    .link-to-form {
+    .anchor-link {
       margin-top: 50px;
     }
   }
-} 
+}
 
 @media (min-width: 461px) and (max-width: 700px) {
   .contact-heading {

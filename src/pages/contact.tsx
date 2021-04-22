@@ -13,7 +13,7 @@ const Contact: React.FC = () => (
       emHeading="Got an idea you want to run past me or considering me to work in you company. Get in touch."
       number="07592832146"
       email="Jr_lewis@outlook.com"/>
-      <div className="contact-form-container">
+      <div className="contact-form-container"  id="form">
         <span className="form-title">
           <h3>Get in touch</h3>
           <p>Send me a message, I’m happy to help.</p>

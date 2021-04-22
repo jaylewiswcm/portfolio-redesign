@@ -43,7 +43,7 @@ const ContactTitle = ({title, emHeading, number, email}: ComponentProps) => {
             </span>
           </span>
        </div>
-       <AnchorLink to="/contact#form" className="link-to-form"> 
+       <AnchorLink to="/contact#form" className="anchor-link"> 
         <span className="btn-bg"></span>
         <p>Send a message</p>
        </AnchorLink >
