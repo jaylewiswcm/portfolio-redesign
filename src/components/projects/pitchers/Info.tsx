@@ -1,7 +1,7 @@
 import React from 'react'
 // Components
 import Technology from "../Technology";
-import BackBtn from "../buttons/backBtn";
+import BackBtn from "../../buttons/BackBtn";
 
  const Info:React.FC = () => {
   return (

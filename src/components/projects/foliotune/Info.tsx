@@ -1,5 +1,5 @@
 import React from 'react'
-import BackBtn from "../buttons/backBtn";
+import BackBtn from "../../buttons/BackBtn";
 // Components
 import Technology from "../Technology";
 
