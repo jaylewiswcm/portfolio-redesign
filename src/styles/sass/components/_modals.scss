@@ -1,0 +1,12 @@
+.cv-modal {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: $white;
+  box-shadow: $shadowHover;
+  margin: 30px;
+  cursor: pointer;
+}

@@ -1,5 +1,7 @@
 import React from 'react'
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import BackBtn from "../../buttons/backBtn";
+// Components
+import Technology from "../Technology";
 
  const Info = () => {
   return (
@@ -17,10 +19,9 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
       <p>To review, I believe the project turned out well. The initial aims were met, using imagery and videos to keep fans interested in the band while they are not touring and also acting as a nice introduction to the band for new listeners or promoters. All desired elements were included such as gig dates, contact form and a bio and were presented in a way that suits the band and matches their style. I wanted the site to feel like theirs and be a part of them and I feel I have achieved this through the font, style of elements and the positioning of components.</p>
       <p>I do have improvements with the technology used. I want to split the site into components because I believe it is a more organised method of developing and is how I like to develop. This can be done with Gatsby as JavaScript is my strongest language and believe Gatsby has some great features for a fast and SEO friendly site. Using gatsby would mean there was no need for an express server so I would remove it and host the site on Netlify.</p>
 
-    <AnchorLink className="anchor-link" to="/work#my-works">
-        <span className="btn-bg"></span>
-        <p>See other projects</p>
-    </AnchorLink>
+    <BackBtn text="see other projects"/>
+
+    <Technology tech={['HTML', 'Node.js', 'SASS', 'Express', 'JavaScript' , 'Youtube']}/>
     </div>
   )
 }

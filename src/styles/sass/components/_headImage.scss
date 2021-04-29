@@ -77,6 +77,16 @@
       left: -5%;
       position: absolute;
     }
+    .me-image {
+      width: 70%;
+      margin: 0 auto;
+      margin-top: -25px;
+    }
+  }
+  .head-image-wrapper-full {
+    .background-square {
+      display: none;
+    }
   }
 }
 @media (min-width: 680px) and (max-width: 850px) {
@@ -89,6 +99,16 @@
       width: 200px;
       bottom: 20%;
       left: -5%;
+    }
+  }
+  .head-image-wrapper-full {
+    .me-image {
+      width: 100%;
+      margin: 0;
+      margin-top: -35%;
+    }
+    .background-square {
+      display: none;
     }
   }
 }

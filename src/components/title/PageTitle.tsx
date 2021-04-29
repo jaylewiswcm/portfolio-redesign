@@ -13,7 +13,7 @@ interface ComponentProps {
  const PageTitle = ({page, title , subHeading, emHeading, link  } :ComponentProps) => {
   return (
     <div className="heading-wrapper">
-      <div className={ page === "home" || page === "me" ? "home-title" : "title-wrapper"}>
+      <div className={ page === "home" ? "home-title" : "title-wrapper"}>
        <h1 className="page-title">{title}</h1> 
        { page === "home" ? 
         <span className="flex-row">
