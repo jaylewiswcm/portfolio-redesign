@@ -6,7 +6,6 @@ interface ComponentProps {
   page: string
 }
  const Works = ({page}: ComponentProps) => {
-  console.log(page);
   return (
     <div className='works-container'> 
       <WorksNav />

@@ -79,7 +79,7 @@ type Props = PropsFromRedux;
             }
           </span>
         </li>
-        <li>
+        {/* <li>
           <button onClick={() => changeWorksType("designs")}>Designs</button>
           <span className="shape-wrapper">
           { 
@@ -92,7 +92,7 @@ type Props = PropsFromRedux;
             )
           }
             </span>
-        </li>
+        </li> */}
       </ul>
     </div>
   )

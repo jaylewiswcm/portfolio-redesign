@@ -1,11 +1,8 @@
-import React, { useState } from 'react'
-// Svgs 
-import github from "../../../images/socials/github.svg"
-import website from "../../../images/workIcons/website.svg"
-import tech from "../../../images/workIcons/tech.svg"
+import React from 'react'
+// Components
+import Links from "../Links";
 
  const ProHeader = () => {
-   const [linkHover, setLinkHover] = useState("")
   return (
     <div className="project-heading">
       <h2>FolioTune</h2>
@@ -13,43 +10,10 @@ import tech from "../../../images/workIcons/tech.svg"
       <div className="photo-wrapper">
         <img src="../../images/works/foliotune/home@2x.jpg" alt="Project Photo"/>
       </div>
-      <div className="links-wrapper">
-        <a 
-          href="https://github.com/JayLewis1/social-song-creator" 
-          target="_blank"
-          onMouseOver={() => setLinkHover("github")}
-          onMouseOut={() => setLinkHover("")}>
-          <img src={github} alt="Github"/>
-          { linkHover === "github" && 
-            <span className="hover-link">
-              <p>Github</p>
-            </span>
-          }
-        </a>
-        <a 
-          href="https://heuristic-mestorf-5c09ca.netlify.app/" 
-          target="_blank"
-          onMouseOver={() => setLinkHover("site")}
-          onMouseOut={() => setLinkHover("")}>
-          <img src={website} alt="Site"/>
-          { linkHover === "site" && 
-            <span className="hover-link">
-              <p>Site</p>
-            </span>
-          }
-        </a>
-        <a 
-          href="/"
-          onMouseOver={() => setLinkHover("tech")}
-          onMouseOut={() => setLinkHover("")}>
-          <img src={tech} alt="Technology"/>
-          { linkHover === "tech" && 
-            <span className="hover-link">
-              <p>Technology</p>
-            </span>
-          }
-        </a>
-      </div>
+      <Links 
+      github="https://github.com/JayLewis1/social-song-creator"
+      url="https://heuristic-mestorf-5c09ca.netlify.app/"
+      anchor="foliotune"/>
     </div>
   )
 }

@@ -726,26 +726,34 @@ html body .anchor-link:hover .btn-bg {
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .contact-heading .details-wrapper .contact-detail .detail-p:hover {
   color: #008bf8;
 }
 
-.contact-heading .details-wrapper .border-right .detail-p:hover {
-  color: #ffa114;
+.contact-heading .details-wrapper .contact-detail button {
+  background: none;
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .contact-heading .details-wrapper .copy-popup {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  bottom: -50px;
-  padding: 5px 15px;
-  color: #008bf8;
-  border-radius: 3px;
-  display: none;
+  margin-top: 2px;
+  margin-left: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+.contact-heading .details-wrapper .copy-popup img {
+  width: 20px;
+  height: 20px;
 }
 
 .contact-heading .anchor-link {
@@ -801,6 +809,10 @@ html body .anchor-link:hover .btn-bg {
   }
   .contact-heading .details-wrapper {
     width: 80%;
+  }
+  .contact-heading .details-wrapper .copy-popup {
+    display: none;
+    opacity: 0;
   }
 }
 
@@ -1014,9 +1026,20 @@ html body .anchor-link:hover .btn-bg {
 }
 
 .works-grid .work-empty-state {
-  background-color: #e0e0e0;
+  background-color: #ffffff;
+  border: #e0e0e0 1px solid;
   width: 90%;
   height: 90%;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .works-grid .work-empty-state h4 {
@@ -1048,7 +1071,6 @@ html body .anchor-link:hover .btn-bg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: auto;
   width: 60%;
   height: auto;
   margin: 25px auto;
@@ -1227,6 +1249,16 @@ html body .anchor-link:hover .btn-bg {
   .works-grid .grid-item-w-info {
     margin: 2% 5%;
   }
+  .works-grid .work-empty-state p {
+    display: none;
+  }
+  .works-grid .work-empty-state a {
+    width: 90%;
+  }
+  .works-grid .work-empty-state a:hover {
+    width: 90%;
+    height: auto;
+  }
   .project-heading h2 {
     margin-left: 0;
   }
@@ -1264,6 +1296,16 @@ html body .anchor-link:hover .btn-bg {
   .works-grid .grid-item {
     height: 200px;
   }
+  .works-grid .work-empty-state p {
+    display: none;
+  }
+  .works-grid .work-empty-state a {
+    width: 95%;
+  }
+  .works-grid .work-empty-state a:hover {
+    width: 95%;
+    height: auto;
+  }
   .project-heading h2 {
     margin-left: 0;
   }
@@ -1300,6 +1342,16 @@ html body .anchor-link:hover .btn-bg {
   }
   .works-grid .grid-item {
     height: 220px;
+  }
+  .works-grid .work-empty-state p {
+    display: none;
+  }
+  .works-grid .work-empty-state a {
+    width: 100%;
+  }
+  .works-grid .work-empty-state a:hover {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1918,17 +1970,81 @@ form input[type="submit"]:hover {
 }
 
 .cv-modal {
-  width: 70px;
-  height: 70px;
+  padding: 10px 20px;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  border-radius: 50%;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 0 50px rgba(45, 49, 66, 0.36);
-          box-shadow: 0 0 50px rgba(45, 49, 66, 0.36);
-  margin: 30px;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-radius: 3px;
+  background-color: #008bf8;
+  -webkit-box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
+          box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
+  cursor: default;
+  z-index: 10;
+}
+
+.cv-modal p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.cv-modal p a {
+  font-style: italic;
+  font-weight: 200;
+  margin-right: 15px;
   cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.cv-modal p a:hover {
+  border-bottom: 1px #ffffff solid;
+}
+
+.cv-modal .close-modal-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 8px;
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.cv-modal .close-modal-btn img {
+  width: 100%;
+}
+
+@media (max-width: 410px) {
+  .cv-modal {
+    width: 90%;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 530px) {
+  .cv-modal {
+    width: 80%;
+  }
+}
+
+@media (min-width: 531px) and (max-width: 630px) {
+  .cv-modal {
+    width: 60%;
+  }
 }
 
 .bio-container {

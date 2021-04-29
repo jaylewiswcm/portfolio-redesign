@@ -18,7 +18,8 @@ const Footer: React.FC = () => {
             </span>
             <span className="social-links">
               <a 
-                href="/" 
+                href="https://github.com/JayLewis1" 
+                target="_blank"
                 onMouseOver={() => setGithubHover(true)}
                 onMouseOut={() => setGithubHover(false)}>
                 { githubHovering ? 
@@ -28,7 +29,8 @@ const Footer: React.FC = () => {
               
               </a>
               <a 
-                href="/"
+                href="https://www.linkedin.com/in/jaylewis98/"
+                target="_blank"
                 onMouseOver={() => setLinkedinHover(true)}
                 onMouseOut={() => setLinkedinHover(false)}>
               { linkedinHovering ? 
