@@ -33,31 +33,38 @@ const Header: React.FC = () => {
   <header className="app-header">
     <div className="center-wrapper">
       <span className="logo-wrapper">
-        <Link to="/" className='logo'>Jay Lewis</Link>  
+        <Link to="/" className='logo'>Jay <span className="blue">Lewis</span></Link>  
       </span>  
       <nav>
         <ul>
           <li>
-            <Link to="/" activeClassName="active" >Home</Link>
-            <span className="link-icon" id="circle">
-              {/* <img src={circle} alt="Circle icon" id="circle"/> */}
-            </span>
+            <Link to="/" activeClassName="active">Home
+            <div className="link-icon" id="circle"></div>
+            </Link>
           </li>
           <li>
-            <Link to="/work" activeClassName="active">Work</Link>
-            <span 
-            className="link-icon">
-                <img src={square} alt="Square icon" id="square"/>
-            </span>
+            <Link 
+              to="/work" 
+              activeClassName="active"  
+              partiallyActive={true}> Work
+            <div 
+            className="link-icon"></div>
+            </Link>
           </li>
           <li>
-            <PartialNavLink to="/me">Me</PartialNavLink>
-            <span className="link-icon">
-                 <img src={triangle} alt="Triangle icon" id="triangle"/>
-            </span>
+            <Link 
+              to="/me" 
+              activeClassName="active" 
+              partiallyActive={true}> Me
+            <div className="link-icon"></div>
+            </Link>
           </li>
           <li id="contact-link">
-            <PartialNavLink to="/contact"  activeClassName="active">Contact</PartialNavLink>
+            <Link 
+              to="/contact" 
+              activeClassName="active" 
+              partiallyActive={true}> Contact
+            <div className="link-icon"></div></Link>
           </li>
         </ul>
       </nav>
@@ -67,10 +74,10 @@ const Header: React.FC = () => {
 
     </div>
     <ul className="mobile-menu" style={menuToggle === true ? { minHeight: "220px" } : {minHeight: "0px"}}>
-        <li><Link to="/" >Home</Link></li>
-        <li><Link to="/work" >Work</Link></li>
-        <li><Link to="/me" >Me</Link></li>
-        <li><Link to="/contact" >Contact</Link></li>
+        <li><Link to="/" activeClassName="active" >Home</Link></li>
+        <li><Link to="/work"activeClassName="active" partiallyActive={true} >Work</Link></li>
+        <li><Link to="/me" activeClassName="active" partiallyActive={true}>Me</Link></li>
+        <li><Link to="/contact" activeClassName="active" partiallyActive={true} >Contact</Link></li>
       </ul>
   </header>
   )

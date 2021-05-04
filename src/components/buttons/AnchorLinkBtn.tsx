@@ -3,15 +3,17 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 interface ComponentProps {
   text : string
+  color: string
+  url: string
 }
 
- const BackBtn = ({text} : ComponentProps) => {
+ const AnchorLinkBtn = ({text, color, url} : ComponentProps) => {
   return (
-    <AnchorLink className="anchor-link" to="/work#my-works">
+    <AnchorLink className={`anchor-link color-${color}`} to={url}>
     <span className="btn-bg"></span>
     <p>{text}</p>
     </AnchorLink>
   )
 }
 
-export default BackBtn;
+export default AnchorLinkBtn;

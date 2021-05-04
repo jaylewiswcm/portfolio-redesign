@@ -1,0 +1,11 @@
+.background-rect {
+  width: 450px;
+  position: absolute;
+  left: -280px;
+  top: calc(100vh + 200px);
+  z-index: 0;
+  display: none;
+  img {
+    width: 100%;
+  }
+}

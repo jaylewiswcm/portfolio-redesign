@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+import { Link } from "gatsby";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import github from "../images/socials/github.svg";
 import githubHover from "../images/socials/github-hover.svg";
 import linkedin from "../images/socials/linkedin.svg";
@@ -43,26 +45,27 @@ const Footer: React.FC = () => {
         </div>
         <div className="center-wrapper">
           <div className="footer-column">
-            <h6>Portfolio</h6>
+            <h6>Navigation</h6>
             <ul>
-              <li><a href="/">Freelance</a></li>
-              <li><a href="/">Personal Projects</a></li>
-              <li><a href="/" className="list-light">By Technology</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/work">Work</Link></li>
+              <li><Link to="/me" className="list-light">Me</Link></li>
+              <li><Link to="/contact" className="list-light">Contact</Link></li>
             </ul>
           </div>
           <div className="footer-column">
-            <h6>Me</h6>
+            <h6>Projects</h6>
             <ul>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Interests</a></li>
-              <li><a href="/">Qualifications</a></li>
-              <li><a href="/">Experience</a></li>
+              <li><Link to="/work/dirt">Dirt</Link></li>
+              <li><Link to="/work/bouncingborders">BouncingBorders</Link></li>
+              <li><Link to="/work/pitchers">Pitchers</Link></li>
+              <li><Link to="/work/foliotune">FolioTune</Link></li>
             </ul>
           </div>
           <div className="footer-column" id="contact-column">
             <h6>Contact</h6>
             <ul>
-              <li id="form-link"><a href="/">Form</a></li>
+              <li id="form-link"><AnchorLink to="/contact#form">Form</AnchorLink></li>
               <li className="p-li">
                 <p>Phone Number</p>
               </li>

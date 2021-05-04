@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from "gatsby";
+// Components
 import PageHeadImage from "../style/PageHeadImage";
+import TitleBtn from "./TitleBtn";
 
 interface ComponentProps {
   page: string
@@ -11,30 +13,33 @@ interface ComponentProps {
 }
 
  const PageTitle = ({page, title , subHeading, emHeading, link  } :ComponentProps) => {
+   const [flexClass, setFlexClass] = useState("")
+
+   useEffect(() => {
+    if(page === "home") {
+      setFlexClass("flex-row")
+    } else {
+      setFlexClass("flex-col")
+    }
+   }, [page])
   return (
     <div className="heading-wrapper">
       <div className={ page === "home" ? "home-title" : "title-wrapper"}>
        <h1 className="page-title">{title}</h1> 
-       { page === "home" ? 
-        <span className="flex-row">
-               <h2 className="page-subHeading">{subHeading}</h2>
-                <Link to={link !== "" ? link : "/"}className="page-emHeading">
-                  <span className="link-bg"></span>
-                  <p>{emHeading}</p></Link>
-  
-            </span>
-            : 
-            <span className="flex-col">
-            <h2 className="page-subHeading">{subHeading}</h2>
-            {   
-              link !== "" ?
-             <h2 className="page-emHeading heading-spacing">{emHeading}<Link to={link !== "" ? link : "/"}>click here</Link></h2>
-             :
-             <h2 className="page-emHeading heading-spacing">{emHeading}</h2>
-            }
-           
-         </span>
-      }
+       <span className={flexClass}>
+          <h2 className="page-subHeading">{subHeading}</h2>
+          { flexClass === "flex-row" ?
+          <Link to={link !== "" ? link : "/"} className="anchor-link color-orange push-right">
+            <span className="btn-bg"></span>
+            <p>{emHeading}</p>
+          </Link>
+            :
+           <h2 className="page-emHeading heading-spacing">{emHeading}
+             { link !== "" && <Link to={link !== "" ? link : "/"}>click here</Link> }
+             </h2>
+             }
+        </span>
+        <TitleBtn page={page}/>
       </div>
       <PageHeadImage page={page}/>
     </div>

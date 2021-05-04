@@ -14,44 +14,14 @@
   .flex-row {
     display: flex;
     flex-direction: row;
-    a {
-      text-decoration: none;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      padding: 5px 20px;
-      position: relative;
-      p {
-        position: relative;
-        z-index: 2;
-        transition: 0.2s;
-        margin: 0;
-      }
-      .link-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        min-width: 0%;
-        width: 0%;
-        height: 100%;
-        transition: 0.2s;
-        z-index: 1;
-        background-color: $orange;
-        overflow: hidden;
-        border-radius: 0px;
-      }
-    }
-    a:hover {
-      background-color: none;
-      .link-bg {
-        min-width: 100%;
-      }
-      p {
-        color: $white;
-      }
-    }
-    .page-emHeading {
+    .push-right {
       margin-left: auto;
+    }
+    .page-subHeading {
+      cursor: default;
+    }
+    .page-subHeading:hover {
+      color: $blue;
     }
   }
   .flex-col {
@@ -63,6 +33,11 @@
     margin-top: 2rem;
     // font-weight: 300;
   }
+}
+.work-title-btn {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: -100px;
 }
 .page-title {
   @extend %h1;
@@ -86,6 +61,7 @@
     border-bottom: $bB;
   }
 }
+
 .title-wrapper {
   width: 40%;
 }
@@ -214,16 +190,12 @@
     .page-title {
       margin-bottom: 50px;
     }
-    .flex-row {
-      a {
-        border-bottom: $bO;
-        margin-bottom: -2px;
-      }
-      a:hover {
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-    }
+  }
+  .work-title-btn {
+    margin-bottom: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .title-wrapper {
     width: 90%;

@@ -1,13 +1,17 @@
-import * as React from "react"
+import React, {useEffect} from "react"
 // Components 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ContactTitle from "../components/title/ContactTitle";
 import Form from "../components/contact/Form";
 
-const Contact: React.FC = () => (
+const Contact: React.FC = () => {
+  useEffect(() => {
+    window.scroll(0,0)
+  },[])
+  return(
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Contact" />
     <ContactTitle 
       title="Get in Contact" 
       emHeading="Got an idea you want to run past me or considering me to work in you company. Get in touch."
@@ -22,5 +26,6 @@ const Contact: React.FC = () => (
       </div>
   </Layout>
 )
+  }
 
 export default Contact 

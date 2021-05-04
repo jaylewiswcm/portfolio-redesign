@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import GridItem from "./GridItem";
 import ItemWithInfo from "./ItemWithInfo";
 import EmptyGridState from "./EmptyGridState";
+import GreenRect from "../../components/background/GreenRect";
 // Redux
 import { connect, ConnectedProps } from "react-redux";
 import { InitialState } from "../../state/store";
@@ -83,6 +84,7 @@ const [worksArr, _setWorksArr] = useState(data.allJson.edges)
         emptyState === true && 
         <EmptyGridState />
       }
+         <GreenRect />
     </div>
   )
 }

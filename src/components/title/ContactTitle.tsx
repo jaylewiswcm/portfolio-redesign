@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 // SVGs
 import copy from "../../images/icons/copy.svg";
-import copied from "../../images/icons/copied.svg";
 // Components
 import Copied from "../contact/Copied";
+import AnchorLinkBtn from "../buttons/AnchorLinkBtn";
 interface ComponentProps {
   title: string
   emHeading: string
@@ -64,10 +64,11 @@ const ContactTitle = ({title, emHeading, number, email}: ComponentProps) => {
         { copiedDetail === email && <Copied />}
           </span>
        </div>
-       <AnchorLink to="/contact#form" className="anchor-link"> 
+       {/* <AnchorLink to="/contact#form" className="anchor-link"> 
         <span className="btn-bg"></span>
         <p>Send a message</p>
-       </AnchorLink >
+       </AnchorLink > */}
+       <AnchorLinkBtn color="blue" url="/contact#form" text="Send a message"/>
     </div>
   )
 }

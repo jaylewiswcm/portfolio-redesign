@@ -94,6 +94,9 @@ form {
       margin-bottom: 8px;
       -webkit-appearance: none;
     }
+    .input-error {
+      border: 1px $red solid;
+    }
     input,
     textarea {
       border: 1px $grey solid;
@@ -140,6 +143,38 @@ form {
   }
   input[type="submit"]:hover {
     box-shadow: $shadowHover;
+  }
+  .input-error {
+    border: 2px $red solid;
+    width: 100%;
+    height: 30px;
+    p {
+      color: $dark;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  .error-message {
+    color: $red;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+}
+.form-success {
+  width: 50%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+  .success-p {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $pF;
+    margin-bottom: 40px;
+    color: $dark;
   }
 }
 .copied-alert {
@@ -199,7 +234,9 @@ form {
     }
   }
   .contact-form-container {
-    .form-title, form {
+    .form-title,
+    form,
+    .form-success {
       width: 90%;
     }
   }
@@ -220,7 +257,9 @@ form {
     }
   }
   .contact-form-container {
-    .form-title, form {
+    .form-title,
+    form,
+    .form-success {
       width: 100%;
       padding: 0 10px;
     }
@@ -232,7 +271,9 @@ form {
     width: 100%;
   }
   .contact-form-container {
-    .form-title, form {
+    .form-title,
+    form,
+    .form-success {
       width: 70%;
     }
   }
@@ -242,5 +283,4 @@ form {
   #contact-wrapper {
     width: 90%;
   }
-
 }

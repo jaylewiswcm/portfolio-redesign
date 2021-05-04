@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 // Components 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -6,9 +6,13 @@ import PageTitle from "../components/title/PageTitle";
 import Bio from "../components/me/Bio";
 import BioBanner from "../components/banners/BioBanner";
 import CvModal from "../components/modals/cv/CvModal";
-const Me: React.FC = () => (
+const Me: React.FC = () => {
+  useEffect(() => {
+    window.scroll(0,0)
+  },[])
+  return (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Me" />
     <PageTitle 
       page="me" 
       title="Me" 
@@ -19,5 +23,5 @@ const Me: React.FC = () => (
       <CvModal />
   </Layout>
 )
-
+  }
 export default Me 
