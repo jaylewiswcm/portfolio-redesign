@@ -3,18 +3,21 @@ import React from 'react'
 import AnchorLinkBtn from "../buttons/AnchorLinkBtn";
 
 interface ComponentProps {
-  page: string
+  anchor: {
+    slug: string
+    text: string
+  }
 }
 
-const TitleBtn = ({page} :ComponentProps ) => {
-
-  if(page !== "work") {
+const TitleBtn = ({anchor} :ComponentProps ) => {
+  console.log(anchor.text)
+  if(anchor.slug === "") {
     return null;
   }
 
   return (
     <div className="work-title-btn">
-      <AnchorLinkBtn url="/work/#my-works" color="orange" text="See the projects"/>
+      <AnchorLinkBtn url={anchor.slug} color="orange" text={anchor.text}/>
     </div>
   )
 }

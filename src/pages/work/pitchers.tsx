@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 // Components 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import ProHeader from "../../components/projects/pitchers/ProHeader";
+import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import Info from "../../components/projects/pitchers/Info";
 
 const Pitchers: React.FC = () => {
@@ -12,7 +12,13 @@ const Pitchers: React.FC = () => {
   return(
   <Layout>
     <SEO title="Pitchers" />
-    <ProHeader />
+    <ProjectHeader 
+      title="Pitchers"
+      subtitle="Sports Bar and Grill"
+      slug="pitchers"
+      github="https://github.com/JayLewis1/pitchers-sports-bar-and-grill"
+      site="https://pitchers-sports-bar-and-grill.netlify.app/"
+    />
     <Info />
   </Layout>
 )

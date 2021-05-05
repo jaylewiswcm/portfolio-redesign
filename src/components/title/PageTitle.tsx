@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "gatsby";
+import {AnchorLink} from "gatsby-plugin-anchor-links";
 // Components
 import PageHeadImage from "../style/PageHeadImage";
 import TitleBtn from "./TitleBtn";
@@ -10,9 +11,13 @@ interface ComponentProps {
   subHeading : string
   emHeading : string
   link: string
+  anchor: {
+    slug: string
+    text: string
+  }
 }
 
- const PageTitle = ({page, title , subHeading, emHeading, link  } :ComponentProps) => {
+ const PageTitle = ({page, title , subHeading, emHeading, link, anchor } :ComponentProps) => {
    const [flexClass, setFlexClass] = useState("")
 
    useEffect(() => {
@@ -20,7 +25,9 @@ interface ComponentProps {
       setFlexClass("flex-row")
     } else {
       setFlexClass("flex-col")
+      
     }
+    console.log(anchor)
    }, [page])
   return (
     <div className="heading-wrapper">
@@ -35,11 +42,11 @@ interface ComponentProps {
           </Link>
             :
            <h2 className="page-emHeading heading-spacing">{emHeading}
-             { link !== "" && <Link to={link !== "" ? link : "/"}>click here</Link> }
+             { link !== "" && <AnchorLink to={link !== "" ? link : "/"}>click here</AnchorLink> }
              </h2>
              }
         </span>
-        <TitleBtn page={page}/>
+        <TitleBtn anchor={anchor}/>
       </div>
       <PageHeadImage page={page}/>
     </div>

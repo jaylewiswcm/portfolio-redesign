@@ -17,10 +17,12 @@ const connector = connect(mapState);
 type PropsFromRedux = ConnectedProps<typeof connector>
 type Props = PropsFromRedux & {
   page: string
+  workData: any
 };
 
- const Grid = ({ typeOfWork, page } :Props) => {
+ const Grid = ({ typeOfWork, page, workData } :Props) => {
   const [emptyState, setEmptyState] = useState(false)
+  const [worksArr, setWorksArr] = useState(workData.allWorkItemsJson.edges)
 
   useEffect(() => {
     if(typeOfWork.length === 0) {
@@ -30,32 +32,24 @@ type Props = PropsFromRedux & {
       setEmptyState(false)
     }
     console.log(typeOfWork);
+    loopFunc(workData.allWorkItemsJson.edges);
+    console.log(worksArr)
   },[typeOfWork])
 
-  const data = useStaticQuery(graphql`
-   {
-    allJson {
-    edges {
-      node {
-        name
-        description
-        imgSrc
-        type
-        slug
-      }
+  const loopFunc = (array: any) => {
+    let newArray =[];
+    for(let x = 0; x < 4; x++) {
+      newArray.push(array[x]);
     }
-  }
-}`)
-
-const [worksArr, _setWorksArr] = useState(data.allJson.edges)
-  
+    setWorksArr(newArray);
+  } 
   return (
     <div className="works-grid">
       {worksArr.length !== 0 && worksArr.map((item: any, index: number) => 
       <Fragment key={index}> 
       {  typeOfWork.map((type: string, index:number) => 
         <Fragment key={index}>
-          { type === item.node.type && page === "home" && 
+           { type === item.node.type && page === "home" &&
             <GridItem 
             key={index} 
             name={item.node.name}
@@ -65,7 +59,7 @@ const [worksArr, _setWorksArr] = useState(data.allJson.edges)
             slug={item.node.slug}
             />
           }
-          { type === item.node.type && page === "works" && 
+          { type === item.node.type && page === "works" &&
             <ItemWithInfo 
             key={index} 
             name={item.node.name}

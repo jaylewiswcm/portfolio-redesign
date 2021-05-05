@@ -17,7 +17,8 @@ const Work: React.FC = () => {
       page="work" 
       title="My Work" 
       subHeading="Selection of projects from freelancing and personal projects." emHeading="If you want to find out more about the technology I use "
-      link="/me" />
+      link="/me/#skills"
+      anchor={{slug: "/work/#my-works", text: "See the projects"}} />
       <Works page="works"/>
       <AddToPortfolio />
   </Layout>

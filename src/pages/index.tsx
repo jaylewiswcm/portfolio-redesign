@@ -17,7 +17,8 @@ const IndexPage: React.FC = () => {
       page="home" 
       title="Developer of modern websites and applications" 
       subHeading="Jay Lewis" emHeading="See my work"
-      link="/work" />
+      link="/work" 
+      anchor={{slug: "", text: ""}}/>
     <Works page="home"/>
     <Contact />
   </Layout>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 // Components 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import ProHeader from "../../components/projects/dirt/ProHeader";
+import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import Info from "../../components/projects/dirt/Info";
 
 const Dirt: React.FC = () => {
@@ -12,7 +12,13 @@ const Dirt: React.FC = () => {
   return (
   <Layout>
     <SEO title="Dirt" />
-    <ProHeader />
+    <ProjectHeader 
+      title="Dirt"
+      subtitle="An Alice in Chains Tribute Band"
+      slug="dirt"
+      github="https://github.com/JayLewis1/dirt"
+      site="http://www.dirtaliceinchains.com/"
+    />
     <Info />
   </Layout>
   )

@@ -817,7 +817,8 @@ html body .color-orange:hover p {
     margin-bottom: 50px;
   }
   .work-title-btn {
-    margin-bottom: 40px;
+    margin: 50px 0;
+    margin-bottom: 30px;
     width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -825,12 +826,6 @@ html body .color-orange:hover p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .title-wrapper {
-    width: 90%;
-  }
-  .title-wrapper .page-title {
-    margin-bottom: 25px;
   }
 }
 
@@ -1092,18 +1087,11 @@ html body .color-orange:hover p {
 }
 
 .project-heading .photo-wrapper {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.project-heading .photo-wrapper img {
   width: 70%;
-  margin: 0 auto;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
           box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
+  margin: 0 auto;
 }
 
 .project-heading .links-wrapper {
@@ -1248,7 +1236,7 @@ html body .color-orange:hover p {
   .project-heading h3 {
     margin-left: 0;
   }
-  .project-heading .photo-wrapper img {
+  .project-heading .photo-wrapper {
     width: 100%;
     margin-top: 15px;
   }
@@ -1295,7 +1283,7 @@ html body .color-orange:hover p {
   .project-heading h3 {
     margin-left: 0;
   }
-  .project-heading .photo-wrapper img {
+  .project-heading .photo-wrapper {
     width: 100%;
     margin-top: 15px;
   }
@@ -2112,6 +2100,10 @@ form .error-message {
   margin: 30px 0;
 }
 
+.photographyImg {
+  width: 100%;
+}
+
 .gallery-grid {
   width: 100%;
   display: -ms-grid;
@@ -2164,5 +2156,9 @@ form .error-message {
 
 .background-rect img {
   width: 100%;
+}
+
+#skills {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=style.css.map */

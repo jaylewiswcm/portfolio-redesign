@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 // Components 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import ProHeader from "../../components/projects/bouncingborders/ProHeader";
+import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import Info from "../../components/projects/bouncingborders/Info"
 
 const BouncingBorders: React.FC = () => {
@@ -12,7 +12,13 @@ const BouncingBorders: React.FC = () => {
   return(
   <Layout>
     <SEO title="BouncingBorders" />
-    <ProHeader />
+    <ProjectHeader 
+      title="Bouncing Borders"
+      subtitle="Couples travel blog"
+      slug="bouncingborders"
+      github="https://github.com/JayLewis1/bouncingborderswp"
+      site="http://bouncingborders.com/"
+    />
     <Info />
   </Layout>
   )

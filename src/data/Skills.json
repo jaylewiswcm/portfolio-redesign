@@ -1,0 +1,58 @@
+[ 
+      {
+        "type" : "Frontend development",
+        "skills": [
+          "HTML",
+          "CSS",
+          "SASS",
+          "JavaScript",
+          "JQuery", 
+          "React",
+          "Redux",
+          "TypeScript",
+          "Apollo"
+        ]
+      },
+      {
+        "type" : "Backend development",
+        "skills": [
+          "Node.js",
+          "Express",
+          "JavaScript",
+          "GraphQL",
+          "Php" 
+        ]
+      },
+      {
+        "type" : "Frameworks",
+        "skills": [
+          "React"
+        ]
+      },
+      {
+        "type" : "Design",
+        "skills": [
+          "Adobe XD",
+          "Adobe Illustrator"
+        ]
+      },
+      {
+        "type" : "Version Control",
+        "skills": [
+          "Github"
+        ]
+      },
+      {
+        "type" : "Database",
+        "skills": [
+          "MongoDB",
+          "Mongoose",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "type" : "CMS",
+        "skills": [
+          "WordPress"
+        ]
+      }]

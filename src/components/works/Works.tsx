@@ -1,6 +1,6 @@
 import React from 'react'
-import Grid from "./Grid";
 import WorksNav from "./WorksNav";
+import WorksQuery from "./WorksQuery";
 
 interface ComponentProps {
   page: string
@@ -9,7 +9,7 @@ interface ComponentProps {
   return (
     <div className='works-container'> 
       <WorksNav />
-      <Grid page={page}/>
+      <WorksQuery  page={page}/>
     </div>
   )
 }

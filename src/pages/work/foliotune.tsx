@@ -2,7 +2,7 @@ import React, {useEffect} from "react"
 // Components 
 import Layout from "../../components/layout"
 import Info from "../../components/projects/foliotune/Info"
-import ProHeader from "../../components/projects/foliotune/ProHeader"
+import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import SEO from "../../components/seo"
 
 const Foliotune: React.FC = () => {
@@ -12,7 +12,13 @@ const Foliotune: React.FC = () => {
   return(
   <Layout>
     <SEO title="FolioTune" />
-    <ProHeader />
+    <ProjectHeader 
+      title="FolioTune"
+      subtitle="Collaborate, share and create song ideas"
+      slug="foliotune"
+      github="https://github.com/JayLewis1/social-song-creator"
+      site="https://heuristic-mestorf-5c09ca.netlify.app/"
+    />
     <Info />
   </Layout>
 )

@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 // Svgs 
-import githubSvg from "../../images/socials/github.svg"
-import website from "../../images/workIcons/website.svg"
-import tech from "../../images/workIcons/tech.svg"
+import githubSvg from "../../../images/socials/github.svg"
+import website from "../../../images/workIcons/website.svg"
+import tech from "../../../images/workIcons/tech.svg"
+
 interface ComponentProps {
   github: string
   url: string
