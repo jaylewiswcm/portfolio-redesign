@@ -10,7 +10,6 @@ interface ComponentProps {
 }
 
 const TitleBtn = ({anchor} :ComponentProps ) => {
-  console.log(anchor.text)
   if(anchor.slug === "") {
     return null;
   }

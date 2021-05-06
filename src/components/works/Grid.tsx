@@ -27,13 +27,10 @@ type Props = PropsFromRedux & {
   useEffect(() => {
     if(typeOfWork.length === 0) {
       setEmptyState(true)
-      console.log("empty")
     } else {
       setEmptyState(false)
     }
-    console.log(typeOfWork);
     loopFunc(workData.allWorkItemsJson.edges);
-    console.log(worksArr)
   },[typeOfWork])
 
   const loopFunc = (array: any) => {

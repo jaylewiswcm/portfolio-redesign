@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 // Components 
-import Layout from "../components/layout"
+import Layout from  "../components/layout/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/title/PageTitle";
 import Bio from "../components/me/Bio";

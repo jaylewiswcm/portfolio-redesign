@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import { Link } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import github from "../images/socials/github.svg";
-import githubHover from "../images/socials/github-hover.svg";
-import linkedin from "../images/socials/linkedin.svg";
-import linkedinHover from "../images/socials/linkedin-hover.svg";
+import github from "../../images/socials/github.svg";
+import githubHover from "../../images/socials/github-hover.svg";
+import linkedin from "../../images/socials/linkedin.svg";
+import linkedinHover from "../../images/socials/linkedin-hover.svg";
 
 const Footer: React.FC = () => {
   const [githubHovering, setGithubHover] = useState(false);

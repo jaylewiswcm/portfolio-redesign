@@ -1,13 +1,14 @@
 import React from 'react'
 // Images
 import square from "../../images/background/blue-square.svg";
+// import ImgQuery from "./ImgQuery";
 
 interface ComponentProps {
   page: string
 }
 
  const PageHeadImage = ({page}:ComponentProps) => {
-  return (
+  return (  
     <>
     { 
       page === "home" &&
@@ -15,6 +16,7 @@ interface ComponentProps {
     <div className="head-image-wrapper">
       <img className="background-square" src={square} alt="backgroun square"></img>
       <img className="work-image"src={`../../images/works/bouncingborders/home@2x.jpg`} alt="BouncingBorders"/>
+      {/* <ImgQuery /> */}
     </div>
         }
     {

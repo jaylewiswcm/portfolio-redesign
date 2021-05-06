@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 
 // Svgs
-import square from "../images/icons/square.svg"
-import triangle from "../images/icons/triangle.svg"
-import burger from "../images/burger/burger.svg";
+import square from "../../images/icons/square.svg"
+import triangle from "../../images/icons/triangle.svg"
+import burger from "../../images/burger/burger.svg";
 
 
 const Header: React.FC = () => {

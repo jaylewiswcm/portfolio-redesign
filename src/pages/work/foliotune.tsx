@@ -1,6 +1,6 @@
 import React, {useEffect} from "react"
 // Components 
-import Layout from "../../components/layout"
+import Layout from "../../components/layout/layout"
 import Info from "../../components/projects/foliotune/Info"
 import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import SEO from "../../components/seo"
