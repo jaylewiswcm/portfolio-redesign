@@ -1,3 +1,90 @@
 #skills {
   margin-top: 50px;
+  .skills-table {
+    border-top: 1px $grey solid;
+    margin-top: 15px;
+    p {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      color: $dark;
+      font-weight: $pF;
+    }
+    li {
+      list-style-type: none;
+      border-bottom: 1px $grey solid;
+      padding: 15px 0;
+      overflow: hidden;
+      .list-top {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        .skill-category {
+          font-size: 1.1rem;
+          font-weight: 500;
+          font-family: $hF;
+          // color: $dark;
+        }
+        .push-right {
+          margin-left: auto;
+          color: $blue;
+        }
+        button {
+          width: 25px;
+          height: 25px;
+          background: none;
+          border: none;
+          outline: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          margin: 0 15px;
+          img {
+            width: 80%;
+            transition: 0.2s;
+          }
+          .up-arrow {
+            transform: rotate(180deg);
+          }
+          .down-arrow {
+            transform: rotate(0);
+          }
+        }
+      }
+      .list-bottom {
+        // margin: 15px 0;
+        // margin-top: 30px;
+        height: 0;
+        min-height: 0;
+        transition: 0.2s;
+        overflow: hidden;
+      }
+      .increase-height {
+        min-height: 20px;
+        height: auto;
+        margin: 15px 0;
+        margin-top: 30px;
+        transition: 0.3s;
+      }
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        li {
+          border: none;
+          padding: 0;
+          p {
+            cursor: default;
+          }
+          p:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
 }

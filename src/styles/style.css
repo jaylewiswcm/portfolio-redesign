@@ -2161,4 +2161,159 @@ form .error-message {
 #skills {
   margin-top: 50px;
 }
+
+#skills .skills-table {
+  border-top: 1px #e0e0e0 solid;
+  margin-top: 15px;
+}
+
+#skills .skills-table p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2d3142;
+  font-weight: "Overpass", sans-serif;
+}
+
+#skills .skills-table li {
+  list-style-type: none;
+  border-bottom: 1px #e0e0e0 solid;
+  padding: 15px 0;
+  overflow: hidden;
+}
+
+#skills .skills-table li .list-top {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skills .skills-table li .list-top .skill-category {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Cabin", sans-serif;
+}
+
+#skills .skills-table li .list-top .push-right {
+  margin-left: auto;
+  color: #008bf8;
+}
+
+#skills .skills-table li .list-top button {
+  width: 25px;
+  height: 25px;
+  background: none;
+  border: none;
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+#skills .skills-table li .list-top button img {
+  width: 80%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#skills .skills-table li .list-top button .up-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#skills .skills-table li .list-top button .down-arrow {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#skills .skills-table li .list-bottom {
+  height: 0;
+  min-height: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  overflow: hidden;
+}
+
+#skills .skills-table li .increase-height {
+  min-height: 20px;
+  height: auto;
+  margin: 15px 0;
+  margin-top: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#skills .skills-table li .category-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+#skills .skills-table li .category-grid li {
+  border: none;
+  padding: 0;
+}
+
+#skills .skills-table li .category-grid li p {
+  cursor: default;
+}
+
+#skills .skills-table li .category-grid li p:hover {
+  color: #008bf8;
+}
+
+.not-found {
+  margin: 100px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.not-found h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Cabin", sans-serif;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.not-found .not-found-p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 460px) {
+  .not-found .not-found-p {
+    width: 90%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

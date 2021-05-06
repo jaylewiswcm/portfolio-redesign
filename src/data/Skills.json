@@ -10,7 +10,8 @@
           "React",
           "Redux",
           "TypeScript",
-          "Apollo"
+          "Apollo",
+          "Gatsby"
         ]
       },
       {
@@ -26,7 +27,8 @@
       {
         "type" : "Frameworks",
         "skills": [
-          "React"
+          "React",
+          "Gatsby"
         ]
       },
       {
@@ -47,6 +49,7 @@
         "skills": [
           "MongoDB",
           "Mongoose",
+          "",
           "PostgreSQL"
         ]
       },
