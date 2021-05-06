@@ -2162,6 +2162,11 @@ form .error-message {
   margin-top: 50px;
 }
 
+#skills .sub-heading {
+  text-align: center;
+  margin: 0 auto;
+}
+
 #skills .skills-table {
   border-top: 1px #e0e0e0 solid;
   margin-top: 15px;
