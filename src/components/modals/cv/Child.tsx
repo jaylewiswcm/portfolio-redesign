@@ -17,7 +17,7 @@ import CloseCross from "../../../images/icons/close-cross.svg";
       className="cv-modal"
       style={toggleModal ? {display: "block"} : {display: "none"}} 
     >
-      <p>Looking for my cv? <a href={`downloadables/CV.pdf`} download>Download it here</a></p>
+      <p>Looking for my cv? <a href={`https://www.jaylewis.me/downloadables/CV.pdf`} download>Download it here</a></p>
       <button className="close-modal-btn" onClick={() => closeModal()}>
         <img src={CloseCross} alt="Close modal"/>
       </button>
