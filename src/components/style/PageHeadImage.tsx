@@ -15,7 +15,7 @@ interface ComponentProps {
 
     <div className="head-image-wrapper">
       <img className="background-square" src={square} alt="backgroun square"></img>
-      <img className="work-image"src={`../../images/works/bouncingborders/home@2x.jpg`} alt="BouncingBorders" width="700px" />
+      <img className="work-image"src={`../../images/works/bouncingborders/home@2x.jpg`} alt="BouncingBorders" />
       {/* <ImgQuery /> */}
     </div>
         }

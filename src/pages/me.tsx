@@ -18,7 +18,7 @@ const Me: React.FC = () => {
     <PageTitle 
       page="me" 
       title="Me" 
-      subHeading="Not only a Graduate Web Developer." emHeading="In-between coding I’m either out with friends, listening to music or playing my guitar. I also love stepping outside for walks and enjoying nature."
+      subHeading="Not only a Graduate Web Developer." emHeading="In between coding, I’m either out with friends, listening to music or playing my guitar. I also love stepping outside for walks and enjoying nature."
       link=""
       anchor={{ text: "See my skills", slug: "/me/#skills"}} />
       <Bio />

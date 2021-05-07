@@ -33,7 +33,7 @@ interface ComponentProps {
               <img className={selectedSkillset === index ? "up-arrow" : "down-arrow"}src={DownArrow} alt="Arrow"/>
             </button>
           </div>
-          <div className={selectedSkillset === index ? "increase-height" :"list-bottom"}
+          <div className={selectedSkillset === index ? "increase-height" :"list-bottom"} aria-hidden={selectedSkillset === index ? false : true}
             >
             <ul className="category-grid">
               { item.node.skills.map((skill: string) => 

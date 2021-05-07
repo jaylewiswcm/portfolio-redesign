@@ -2248,14 +2248,13 @@ form .error-message {
 #skills .skills-table li .list-bottom {
   height: 0;
   min-height: 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   overflow: hidden;
 }
 
 #skills .skills-table li .increase-height {
   min-height: 20px;
-  height: auto;
   margin: 15px 0;
   margin-top: 30px;
   -webkit-transition: 0.3s;
