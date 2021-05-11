@@ -3,13 +3,15 @@ module.exports = {
     title: `Jay Lewis`,
     description: `Design and development portfolio for the web.`,
     author: `Jay Lewis`,
-    siteURL: `http://localhost:8000/`
+    siteURL: `https://www.jaylewis.me/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-json`,
-
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -24,8 +26,6 @@ module.exports = {
         path: `${__dirname}/src/data/`
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,7 +38,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

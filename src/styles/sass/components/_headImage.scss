@@ -31,11 +31,22 @@
   align-items: center;
   position: relative;
   padding-left: 5%;
+  // .work-image {
+  //   width: 700px;
+  //   border-radius: 3px;
+  //   box-shadow: $shadowHover;
+  //   // margin-left: 100px;
+  // }
   .work-image {
+    position: absolute;
     width: 700px;
     border-radius: 3px;
-    box-shadow: $shadowHover;
-    // margin-left: 100px;
+    box-shadow: $shadow;
+    z-index: 1;
+    top: 45%;
+    left: 10%;
+    transform: translate(0, -50%);
+    background-color: $white;
   }
   .me-image {
     width: 350px;

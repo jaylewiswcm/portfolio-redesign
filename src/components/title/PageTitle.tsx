@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from "gatsby";
 import {AnchorLink} from "gatsby-plugin-anchor-links";
 // Components
-import PageHeadImage from "../style/PageHeadImage";
+import PageHeadImage from "../titleImage/PageHeadImage";
 import TitleBtn from "./TitleBtn";
 
 interface ComponentProps {
@@ -27,7 +27,6 @@ interface ComponentProps {
       setFlexClass("flex-col")
       
     }
-    console.log(anchor)
    }, [page])
   return (
     <div className="heading-wrapper">

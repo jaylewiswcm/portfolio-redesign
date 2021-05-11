@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import PageTitle from "../components/title/PageTitle";
 import Bio from "../components/me/Bio";
 import BioBanner from "../components/banners/BioBanner";
-import Skills from "../components/me/skills/SkillsQuery";
+import SkillsQuery from "../components/me/skills/SkillsQuery";
 import CvModal from "../components/modals/cv/CvModal";
 const Me: React.FC = () => {
   useEffect(() => {
@@ -22,7 +22,7 @@ const Me: React.FC = () => {
       link=""
       anchor={{ text: "See my skills", slug: "/me/#skills"}} />
       <Bio />
-      <Skills />
+      <SkillsQuery />
       <BioBanner />
       <CvModal />
   </Layout>

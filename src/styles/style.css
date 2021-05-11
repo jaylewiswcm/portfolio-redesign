@@ -1911,10 +1911,17 @@ form .error-message {
 }
 
 .head-image-wrapper-full .work-image {
+  position: absolute;
   width: 700px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0 50px rgba(45, 49, 66, 0.36);
-          box-shadow: 0 0 50px rgba(45, 49, 66, 0.36);
+  -webkit-box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
+          box-shadow: 0 0 20px rgba(45, 49, 66, 0.13);
+  z-index: 1;
+  top: 45%;
+  left: 10%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: #ffffff;
 }
 
 .head-image-wrapper-full .me-image {

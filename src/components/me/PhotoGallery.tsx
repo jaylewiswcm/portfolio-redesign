@@ -1,8 +1,14 @@
 import React from 'react'
+import { StaticImage } from "gatsby-plugin-image"
 
  const PhotoGallery = () => {
   return (
-    <img className="photographyImg" src="../../images/gallery/venice@2x.jpg" alt="Venice"/>
+    <StaticImage
+    src="../../images/gallery/venice@2x.jpg"
+    alt="Venice"
+    className="photographyImg"
+    placeholder="blurred"
+  />
   )
 }
 

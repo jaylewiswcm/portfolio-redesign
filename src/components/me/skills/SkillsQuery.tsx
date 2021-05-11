@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 // Components 
 import SkillsList from "./SkillsList";
 
-const Skills:React.FC = () => {
+const SkillsQuery:React.FC = () => {
 
 
 return (
@@ -29,17 +29,6 @@ return (
     </div>
     )}/>
 )
-// const [skillData, _setSkillData ] = useState(data.allJson.edges);
-  // return (
-    // <div id="skills">
-    //   <h3 className="sub-heading">Skills</h3>
-    //   <div className="skills-table">
-    //     <div className="row">
-    //       <h5>{}</h5>
-    //     </div>
-    //   </div>
-    // </div>
-  // )
 }
 
-export default Skills;
+export default SkillsQuery;

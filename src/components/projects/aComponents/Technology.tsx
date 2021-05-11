@@ -10,8 +10,8 @@ interface ComponentProps {
       <h4>Technology Used</h4>
       <div className="tech-grid">
         {
-          tech.map((x) => 
-            <p>{x}</p>
+          tech.map((x: any, index: number ) => 
+            <p key={index}>{x}</p>
           )
         }
       </div>

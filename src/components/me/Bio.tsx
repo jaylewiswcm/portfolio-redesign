@@ -1,11 +1,16 @@
 import React from 'react'
 import PhotoGallery from "./PhotoGallery";
+import { StaticImage } from "gatsby-plugin-image"
 
-const Bio = () => {
+const Bio: React.FC = () => {
   return ( 
     <div className="bio-container">
       <p>My name’s Jay. I’m from the lovely town of Chepstow, a little place on the border of Wales, sat nicely between Cardiff and Bristol. The town itself doesn’t offer much apart from pubs, hairdressers and of course the castle but being along the Wye Valley is the real beauty with nature all around. The natural sights and walks are amazing, I recommend to anyone who hasn’t been before to see for themselves.</p>
-      <img className="map" src="../../images/me/map@2x.jpg" alt="Map of Chepstow"/>
+      <StaticImage 
+        className="map"  
+        src="../../images/me/map@2x.jpg" 
+        alt="Map of Chepstow"
+        placeholder="blurred"/>
       <p>My love for web development comes from the element of building something, being creative and solving problems. I love how these three factors intertwine each day as you develop. It really does make me want to go to my laptop and start coding. The feeling once you’ve conquered a problem that you’ve been challenged by for some time is amazing but also paired with shame from realising the problem was created by you the whole time is just a wonderful add on.</p>
       <p>I love music, I couldn’t live without it whether it’s any kind of rock, disco, liquid DNB, reggae or hip-hop; whatever I’m feeling in the moment is reflected in the music I listen to. </p>
       <p>My all-time favourite musician is Jimi Hendrix. When I listen to him I’m in constant awe of how good he plays the guitar. He is the greatest. My love of music developed into wanting to create music so I started to teach myself the guitar and 7 years on I use it as a type of meditation for myself where I can express my feelings through it.</p>

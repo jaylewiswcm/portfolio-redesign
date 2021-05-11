@@ -36,8 +36,8 @@ interface ComponentProps {
           <div className={selectedSkillset === index ? "increase-height" :"list-bottom"} aria-hidden={selectedSkillset === index ? false : true}
             >
             <ul className="category-grid">
-              { item.node.skills.map((skill: string) => 
-                <li><p>{skill}</p></li>
+              { item.node.skills.map((skill: string, index: number) => 
+                <li key={index}><p>{skill}</p></li>
               ) }
             </ul>
           </div>
