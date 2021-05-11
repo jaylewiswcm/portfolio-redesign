@@ -35,7 +35,7 @@ type Props = PropsFromRedux & {
 
   const loopFunc = (array: any) => {
     let newArray =[];
-    for(let x = 0; x < 4; x++) {
+    for(let x = 0; x < 3; x++) {
       newArray.push(array[x]);
     }
     setWorksArr(newArray);
