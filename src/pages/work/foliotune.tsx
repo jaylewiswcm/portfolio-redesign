@@ -17,7 +17,7 @@ const Foliotune: React.FC = () => {
       subtitle="Collaborate, share and create song ideas"
       slug="foliotune"
       github="https://github.com/JayLewis1/social-song-creator"
-      site="https://heuristic-mestorf-5c09ca.netlify.app/"
+      site="https://foliotune.netlify.app/"
     />
     <Info />
   </Layout>

@@ -25,8 +25,7 @@ import FormSuccess from "./FormSuccess";
    if(state.succeeded) {
      return <FormSuccess />
    }
-   console.log(state.errors)
-
+  
    const onChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> ) => {
     setFormData({...formData, [e.target.name] : e.target.value})
     console.log(formData);
@@ -58,7 +57,6 @@ import FormSuccess from "./FormSuccess";
       newErrors.message = "Message has to be more than 5 characters";
       newErrors.success = false;
      }
-
      if(newErrors.name === "" || newErrors.email === "" || newErrors.message === "" || newErrors.message.length >= 5 ) {
       setInputErrors(newErrors);
      }

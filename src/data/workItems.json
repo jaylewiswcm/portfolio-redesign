@@ -19,12 +19,6 @@
       "imgSrc" : "/works/pitchers/home@2x.jpg",
       "type" : "freelance",
       "slug": "pitchers"
-    },
-    {
-      "name" : "FolioTune",
-      "description" : "Social music creation web application",
-      "imgSrc" : "/works/foliotune/home@2x.jpg",
-      "type" : "personal",
-      "slug": "foliotune"
     }
+  
 ]
