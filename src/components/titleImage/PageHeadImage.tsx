@@ -24,7 +24,7 @@ interface ComponentProps {
         { 
       page === "home" &&
       <StaticImage
-          src="../../../images/works/bouncingborders/home@2x.jpg"
+          src="../../images/works/bouncingborders/home@2x.jpg"
           alt="Bouncing Borders"
           className="work-image"
           placeholder="blurred"
