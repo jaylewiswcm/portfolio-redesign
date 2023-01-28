@@ -24,8 +24,8 @@ interface ComponentProps {
         { 
       page === "home" &&
       <StaticImage
-          src="../../images/works/bouncingborders/home@2x.jpg"
-          alt="Bouncing Borders"
+          src="../../images/works/middletons/blog-home.jpg"
+          alt="Middletons Mobility Blog"
           className="work-image"
           placeholder="blurred"
         />
@@ -33,11 +33,11 @@ interface ComponentProps {
           { 
       page === "work" &&
       <StaticImage
-          src="../../images/works/bouncingborders/home@2x.jpg"
-          alt="Bouncing Borders"
-          className="work-image"
-          placeholder="blurred"
-        />
+      src="../../images/works/oak-tree/home@2x.jpg"
+      alt="Oak Tree Mobility Home page"
+      className="work-image"
+      placeholder="blurred"
+    />
         }
           { 
       page === "me" &&

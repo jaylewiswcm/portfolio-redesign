@@ -5,7 +5,7 @@ import {
  } from "../../actions/works/types";
 
  const initialState: Works ={
-  typeOfWork: ["freelance", "personal"]
+  typeOfWork: ["career","freelance", "personal"]
  }
 
  export const worksReducer = (state: Works = initialState, action : WorksTypes) => {

@@ -52,6 +52,20 @@ type Props = PropsFromRedux;
       <h3 className="sub-heading">Works</h3>
       <ul className="btn-list">
         <li>
+          <button onClick={() => changeWorksType("career")}>Career</button>
+          <span className="shape-wrapper">
+            { 
+              typeOfWork.map((type:string, index:number) => 
+                <Fragment key={index}>
+                  {type === "career" &&  
+                      <img src={circle} alt="Circle" className="smaller-shape"/>    
+                  }
+                </Fragment>
+              )
+            }
+          </span>
+        </li>
+        <li>
           <button onClick={() => changeWorksType("freelance")}>Freelance</button>
           <span className="shape-wrapper">
             { 

@@ -1,5 +1,18 @@
 [
     {
+      "name" : "Oak Tree Mobility",
+      "description" : "A mobility lead generation website",
+      "imgSrc" : "/works/oak-tree/home@2x.jpg",
+      "type" : "career",
+      "slug": "oak-tree"
+    },{
+      "name" : "Middletons Mobility",
+      "description" : "A mobility ecommerce and lead generation website",
+      "imgSrc" : "/works/middletons/home@2x.jpg",
+      "type" : "career",
+      "slug": "middletons-mobility"
+    },
+    {
       "name" : "Dirt",
       "description" : "Band brochure website",
       "imgSrc" : "/works/dirt/home@2x.jpg",
@@ -19,5 +32,12 @@
       "imgSrc" : "/works/pitchers/home@2x.jpg",
       "type" : "freelance",
       "slug": "pitchers"
+    },
+    {
+      "name" : "James Gorwill Portfolio",
+      "description" : "Design Portfolio",
+      "imgSrc" : "/works/jtg-portfolio/home@2x.jpg",
+      "type" : "freelance",
+      "slug": "james-thomson-gorwill-portfolio"
     }
 ]

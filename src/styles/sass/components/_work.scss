@@ -45,7 +45,10 @@
 .works-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 800px;
+  gap: 25px;
+  width: 100%;
+  padding: 0 15px;
+  max-width: 1000px;
   margin: 0 auto;
   margin-bottom: 100px;
   position: relative;
@@ -57,9 +60,9 @@
     justify-content: center;
     border-radius: 3px;
     a {
-      width: 90%;
-      height: 90%;
-      transition: 0.2s;
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
       border-radius: 3px;
       box-shadow: $shadow;
       overflow: hidden;
@@ -70,8 +73,8 @@
       }
     }
     a:hover {
-      width: 95%;
-      height: 95%;
+      width: 105%;
+      height: 105%;
       box-shadow: $shadowHover;
     }
   }
@@ -266,7 +269,6 @@
 
 @media (max-width: 480px) {
   .works-grid {
-    width: 90%;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     .grid-item {
@@ -324,7 +326,6 @@
 
 @media (min-width: 480px) and (max-width: 640px) {
   .works-grid {
-    width: 90%;
     .grid-item {
       height: 200px;
     }
@@ -377,7 +378,6 @@
 
 @media (min-width: 641px) and(max-width: 850px) {
   .works-grid {
-    width: 620px;
     .grid-item {
       height: 220px;
     }
