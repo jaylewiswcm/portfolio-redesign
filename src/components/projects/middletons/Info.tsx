@@ -7,7 +7,8 @@ import AnchorLinkBtn from "../../buttons/AnchorLinkBtn";
  const Info:React.FC = () => {
   return (
     <div className="projects-p-container">
-      <p>He liked the grid layout that instagram provided and wanted the overall site design to be subtle so his work could stand out.</p>
+      <br/>
+      <br/>
       <StaticImage
           src="../../../images/works/middletons/blog@2x.jpg"
           alt="Middletons Blog page"
