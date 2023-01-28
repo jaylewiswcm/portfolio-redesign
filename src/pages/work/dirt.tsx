@@ -5,6 +5,9 @@ import SEO from "../../components/seo"
 import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import Info from "../../components/projects/dirt/Info";
 
+//images
+import Home from '../../images/works/dirt/home@2x.jpg'
+
 const Dirt: React.FC = () => {
   useEffect(() => {
     window.scroll(0,0)
@@ -18,6 +21,7 @@ const Dirt: React.FC = () => {
       slug="dirt"
       github="https://github.com/JayLewis1/dirt"
       site="http://www.dirtaliceinchains.com/"
+      imageSrc={Home}
     />
     <Info />
   </Layout>

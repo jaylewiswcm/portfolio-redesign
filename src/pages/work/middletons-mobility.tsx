@@ -5,6 +5,9 @@ import SEO from "../../components/seo"
 import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import Info from "../../components/projects/middletons/Info";
 
+//images
+import Home from '../../images/works/middletons/home-hero@2x.png'
+
 const middletonsMobilty: React.FC = () => {
   useEffect(() => {
     window.scroll(0,0)
@@ -18,6 +21,7 @@ const middletonsMobilty: React.FC = () => {
       slug="middletons"
       github="https://github.com/jaylewiswcm/james-portfolio"
       site="https://middletons.co.uk/"
+      imageSrc={Home}
       />
     <Info />
   </Layout>

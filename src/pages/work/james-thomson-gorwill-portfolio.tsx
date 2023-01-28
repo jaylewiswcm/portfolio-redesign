@@ -5,6 +5,9 @@ import SEO from "../../components/seo"
 import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import Info from "../../components/projects/jtgportfolio/Info";
 
+//images
+import Home from '../../images/works/jtg-portfolio/home@2x.png'
+
 const JTGPortfolio: React.FC = () => {
   useEffect(() => {
     window.scroll(0,0)
@@ -18,6 +21,7 @@ const JTGPortfolio: React.FC = () => {
       slug="jtg-portfolio"
       github="https://github.com/jaylewiswcm/james-portfolio"
       site="https://jamesthomsongorwill.vercel.app/"
+      imageSrc={Home}
     />
     <Info />
   </Layout>

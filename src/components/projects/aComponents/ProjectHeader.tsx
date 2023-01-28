@@ -8,14 +8,15 @@ interface ComponentProps {
   github: string
   site: string
   slug: string
+  imageSrc:string
 }
 
- const ProjectHeader = ({title, subtitle, github, site, slug}:ComponentProps) => {
+ const ProjectHeader = ({title, subtitle, github, site, slug, imageSrc}:ComponentProps) => {
   return (
     <div className="project-heading">
       <h2>{title}</h2>
       <h3>{subtitle}</h3>
-      <img className="photo-wrapper" src={`../../images/works/${slug}/home@2x.jpg`} alt="Project Photo"/>
+      <img className="photo-wrapper" src={imageSrc} alt="Project Photo"/>
       <Links 
       github={github}
       url={site}

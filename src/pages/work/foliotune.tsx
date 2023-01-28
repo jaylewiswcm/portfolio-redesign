@@ -5,6 +5,9 @@ import Info from "../../components/projects/foliotune/Info"
 import ProjectHeader from "../../components/projects/aComponents/ProjectHeader";
 import SEO from "../../components/seo"
 
+//images
+import Home from '../../images/works/foliotune/home@2x.jpg'
+
 const Foliotune: React.FC = () => {
   useEffect(() => {
     window.scroll(0,0)
@@ -18,6 +21,7 @@ const Foliotune: React.FC = () => {
       slug="foliotune"
       github="https://github.com/JayLewis1/social-song-creator"
       site="https://foliotune.netlify.app/"
+      imageSrc={Home}
     />
     <Info />
   </Layout>
